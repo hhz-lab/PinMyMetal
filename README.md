@@ -33,12 +33,15 @@ atomium is a molecular modeller and file parser, capable of reading from and wri
 As we have made modifications to the source code of Atomium to enhance its execution speed, please perform the following actions.
 
 **Install the Atomium package using pip3:**
+
 `pip3 install atomium `
 
 **Use the command to find the installation location of the Atomium package. Look for the "Location" field in the output, which indicates the installation path of the Atomium package.**
+
 `pip3 show atomium`
 
 **This command copies the modified structures.py file to the Atomium package directory, replacing the existing file.**
+
 `cp /zinc_prediction/zinc_prediction/structures.py /path/to/atomium/atomium/`
 
 2. Run the shell script to complete the prediction
@@ -49,6 +52,7 @@ python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
 **Display all possible options**
+
 `./metal3d.py --help`
 
 # Data
