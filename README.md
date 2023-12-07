@@ -30,9 +30,9 @@ First move the zinc_prediction folder to your root directory.
 
 Then optimizing Atomium
 atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
-As we have made modifications to the source code of Atomium to enhance its execution speed, please perform the following actions.
+As we have made modifications to the source code of Atomium to enhance its execution speed, please perform the following actions:
 
-**Install the Atomium package using pip3:**
+**Install the Atomium package using pip3.**
 
 `pip3 install atomium `
 
@@ -70,5 +70,5 @@ export PATH
 CIFTr [-i filename] -extension pdb
 ```
 # License
-All code is licensed under MIT license
+All code is licensed under MIT license.
 
