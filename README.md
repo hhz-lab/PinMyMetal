@@ -5,7 +5,7 @@ If using this work please cite:
 >PinMyMetal: A hybrid learning system to accurately model metal binding sites in proteins 
 
 # How to use PinMyMetal 
-For easy and quick use without installation, use [the PinMyMetal web server](https://tributary.com.cn/PMM)
+For easy and quick use without installation, use [the PinMyMetal web server](tributary.com.cn/PMM)
 
 You can also run it locally. Command line usage is described below.
 
