@@ -55,6 +55,9 @@ python3 excute.py -f PDB_file
 
 `./metal3d.py --help`
 
+No non-standard hardware is required.
+Installation and prediction process can typically be completed within 1 hour on a "normal" desktop computer.
+
 # Data
 The PDB codes and relevant characteristic data used for training and testing are available in `data`.
 
