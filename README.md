@@ -26,7 +26,9 @@ For other installation methods, please visit [PostgreSQL official website](https
 
 1. Preparing for predictions involves two steps to ensure a smooth and accurate process. Here are the steps you should take:
 
-First move the zinc_prediction folder to your root directory.
+**First move the zinc_prediction folder to your root directory.**
+
+`sudo mv zinc_prediction /zinc_prediction`
 
 Then optimizing Atomium
 atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
@@ -34,7 +36,7 @@ As we have made modifications to the source code of Atomium to enhance its execu
 
 **Install the Atomium package using pip3.**
 
-`pip3 install atomium `
+`pip3 install atomium`
 
 **Use the command to find the installation location of the Atomium package. Look for the "Location" field in the output, which indicates the installation path of the Atomium package.**
 
@@ -54,6 +56,10 @@ python3 excute.py -f PDB_file
 **Display all possible options**
 
 `./metal3d.py --help`
+
+**For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.**
+
+`python3 excute.py -p 3mnd`
 
 No non-standard hardware is required.
 Installation and prediction process can typically be completed within 1 hour on a "normal" desktop computer.
