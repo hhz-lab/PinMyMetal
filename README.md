@@ -26,9 +26,11 @@ For other installation methods, please visit [PostgreSQL official website](https
 
 1. Preparing for predictions involves two steps to ensure a smooth and accurate process. Here are the steps you should take:
 
-**First move the zinc_prediction folder to your root directory.**
-
-`sudo mv zinc_prediction /zinc_prediction`
+**First, move the zinc_prediction folder to your root directory, and then modify the directory permissions to make it executable and writable.**
+```
+sudo mv zinc_prediction /zinc_prediction
+chmod -R 777 /zinc_prediction
+```
 
 Then optimizing Atomium
 atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
