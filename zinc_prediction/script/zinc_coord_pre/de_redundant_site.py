@@ -13,7 +13,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname='"+DBname+"' user='sg_display' password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432'")
 cur = conn.cursor()
 
 sql = "select distinct pdbid, conc_comma(id||'_'||zinc_x||'_'||zinc_y||'_'||zinc_z) as zincs from zinc_predict_site234_2 where deredundant_site is true group by pdbid order by pdbid "
