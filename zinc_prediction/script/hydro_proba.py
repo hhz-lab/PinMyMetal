@@ -17,7 +17,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname='"+DBname+"' user='sg_display' password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432'")
 cur = conn.cursor()
 
 sql = "select distinct id,tag,c_value,solv,c_value_exp,solv_exp from hydrophobic_pre where site_count >= 3 order by id,tag"
