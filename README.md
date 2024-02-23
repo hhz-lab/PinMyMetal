@@ -2,7 +2,7 @@
 
 
 If using this work please cite:
->PinMyMetal: A hybrid learning system to accurately model metal binding sites in proteins 
+>PinMyMetal: A hybrid learning system to accurately model metal binding sites in macromolecules
 
 # How to use PinMyMetal 
 For easy and quick use without installation, use [the PinMyMetal web server](https://PMM.biocloud.top)
