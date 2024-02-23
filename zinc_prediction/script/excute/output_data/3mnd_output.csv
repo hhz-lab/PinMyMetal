@@ -1,0 +1,6 @@
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"B","resseq":"153","ligand":"60,B,HIS;77,B,HIS;68,B,HIS;80,B,ASP"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"A","resseq":"153","ligand":"77,A,HIS;68,A,HIS;60,A,HIS;80,A,ASP"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"A","resseq":"154","ligand":"107,A,HIS;64,A,HIS;165,A,HOH"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"B","resseq":"155","ligand":"64,B,HIS;107,B,HIS;205,B,HOH"}
+{"name":"pre","bench":"predict","status":"U","pid":"1","resseq":"218","chain":"A","ligand":"43,A,HIS;45,A,HIS;60,A,HIS;117,A,HIS"}
+{"name":"pre","bench":"predict","status":"U","pid":"10","resseq":"219","chain":"B","ligand":"43,B,HIS;45,B,HIS;60,B,HIS;117,B,HIS"}

@@ -17,7 +17,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname='"+DBname+"' user='sg_display' password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432'")
 cur = conn.cursor()
 
 sql = "select id,resname_a,resname_b,a_ne2,a_nd1,a_sg,a_ce1,a_cd2,b_ne2,b_nd1,b_sg,b_ce1,b_cd2,\

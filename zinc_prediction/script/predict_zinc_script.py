@@ -32,7 +32,7 @@ dict_seqlen = {}
 pid=inputid
 DBname="zinc"+str(pid)
 
-conn = pg.connect("dbname='"+DBname+"' user='sg_display' password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432'")
 cur = conn.cursor()
 
 sql=" select distinct pdbid, zinc_x,zinc_y,zinc_z,\
