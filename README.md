@@ -55,9 +55,6 @@ python3 excute.py -p PDB_id
 python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
-**Display all possible options**
-
-`./excute.py --help`
 
 **For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.**
 
