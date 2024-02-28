@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
-
-
-# %load mvc_build_model_test.py
-#!/usr/bin/env python
-
 import numpy as np
 import pandas as pd
 
@@ -135,13 +129,6 @@ ensemble_input = np.column_stack((y_pred_fcnn, y_pred_model1, y_pred_model2, y_p
 ensemble_model = LogisticRegression()
 ensemble_model.fit(ensemble_input, y_test)
 
-DT = ensemble_model.fit(ensemble_input, y_test)
+#DT = ensemble_model.fit(ensemble_input, y_test)
 
-pickle.dump(DT,open("mvc.dat","wb"))
-
-
-# In[ ]:
-
-
-
-
+#pickle.dump(DT,open("mvc.dat","wb"))
