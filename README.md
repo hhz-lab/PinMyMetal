@@ -16,9 +16,6 @@ You can also run it locally. Command line usage is described below.
 
 **Linux Platform installation**
 ```
-sudo apt install postgresql-client-common
-sudo apt install postgresql
-cd /var/lib/postgresql/
 sudo apt install postgresql
 ```
 For other installation methods, please visit [PostgreSQL official website](https://www.postgresql.org/)
