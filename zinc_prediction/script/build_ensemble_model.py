@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import numpy as np
 import pandas as pd
 
@@ -17,21 +14,21 @@ from sklearn.pipeline import Pipeline
 import itertools
 from sklearn.metrics import confusion_matrix, recall_score, classification_report
 from math import sqrt
-import pickle
+from joblib import dump, load
+from keras.models import load_model, save_model
 from sklearn.model_selection import StratifiedShuffleSplit
 
 import keras
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import BatchNormalization
-from keras.optimizers import SGD, Adam, Nadam
+from tensorflow.keras.optimizers import SGD, Adam, Nadam
 from keras import initializers
 from keras import regularizers
 from sklearn.metrics import classification_report, roc_curve, auc
 from sklearn.preprocessing import LabelBinarizer
 from keras.layers import Dense, Activation, Dropout, LSTM
 from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.ensemble import VotingClassifier
 
 filename="mvc_train_data"
 
@@ -112,23 +109,16 @@ def create_keras_model():
     model._estimator_type="classifier"
     return model
 
-INIT_LR = 0.005
-EPOCHS = 10
-
 keras_classifier = KerasClassifier(build_fn=create_keras_model)
 keras_classifier.fit(X_train, y_train)
 
-y_pred_model1 = clf1.predict_proba(X_test)[:, 1]
-y_pred_model2 = clf2.predict_proba(X_test)[:, 1]
-y_pred_model3 = clf3.predict_proba(X_test)[:, 1]
-y_pred_model4 = clf4.predict_proba(X_test)[:, 1]
-y_pred_fcnn = keras_classifier.predict_proba(X_test)[:, 1]
 
-ensemble_input = np.column_stack((y_pred_fcnn, y_pred_model1, y_pred_model2, y_pred_model3, y_pred_model4))
+models = {'model1':clf1,
+        'model2':clf2,
+        'model3':clf3,
+        'model4':clf4}
 
-ensemble_model = LogisticRegression()
-ensemble_model.fit(ensemble_input, y_test)
+dump(models, 'models.joblib')
 
-#DT = ensemble_model.fit(ensemble_input, y_test)
+keras_classifier.model.save('fcnn.h5')
 
-#pickle.dump(DT,open("mvc.dat","wb"))

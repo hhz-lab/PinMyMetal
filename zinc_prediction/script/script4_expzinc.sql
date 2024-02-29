@@ -48,46 +48,5 @@ create table exp_pre_site as
 alter table exp_pre_site add column redundancy bool default false;
 update exp_pre_site t1 set redundancy = true from (select pdbid,count(*) as pdbid_count from exp_pre_site group by pdbid ) t2 where t1.pdbid=t2.pdbid and t2.pdbid_count=2;
 
-drop table exp_zinc_site2;
-create table exp_zinc_site2 as
-        select a.pdbid,a.residueid_ion,a.x_ion,a.y_ion,a.z_ion,
-        a.residueid_lig as residueid_a, b.residueid_lig as residueid_b,a.bench from
-        (select * from pdb_zinc_coordinate where site_count = 2 and resname_lig in ('CYS','HIS') ) a
-        left join (select * from pdb_zinc_coordinate where site_count = 2 and resname_lig in ('CYS','HIS')) b
-        on a.pdbfileid = b.pdbfileid and a.residueid_ion=b.residueid_ion
-        where a.residueid_lig < b.residueid_lig and a.atomid_lig < b.atomid_lig;
-
-drop table exp_zinc_site3;
-create table exp_zinc_site3 as
-        select a.pdbid,a.residueid_ion,a.x_ion,a.y_ion,a.z_ion,
-        a.residueid_lig as residueid_a, b.residueid_lig as residueid_b,
-        c.residueid_lig as residueid_c,a.bench  from
-        (select * from pdb_zinc_coordinate where site_count = 3 and resname_lig in ('CYS','HIS')) a
-        left join (select * from pdb_zinc_coordinate where site_count = 3 and resname_lig in ('CYS','HIS')) b
-        on a.pdbfileid = b.pdbfileid and a.residueid_ion=b.residueid_ion
-        left join (select * from pdb_zinc_coordinate where site_count = 3 and resname_lig in ('CYS','HIS')) c
-        on a.pdbfileid = c.pdbfileid and a.residueid_ion=c.residueid_ion
-        where a.residueid_lig < b.residueid_lig and a.atomid_lig < b.atomid_lig and b.residueid_lig < c.residueid_lig and b.atomid_lig < c.atomid_lig;
-
-drop table exp_zinc_site4;
-create table exp_zinc_site4 as
-        select a.pdbid,a.residueid_ion,a.x_ion,a.y_ion,a.z_ion,
-        a.residueid_lig as residueid_a, b.residueid_lig as residueid_b,
-        c.residueid_lig as residueid_c,
-        d.residueid_lig as residueid_d,a.bench from
-        (select * from pdb_zinc_coordinate where site_count = 4 and resname_lig in ('CYS','HIS')) a
-        left join (select * from pdb_zinc_coordinate where site_count = 4 and resname_lig in ('CYS','HIS')) b
-        on a.pdbfileid = b.pdbfileid and a.residueid_ion=b.residueid_ion
-        left join (select * from pdb_zinc_coordinate where site_count = 4 and resname_lig in ('CYS','HIS')) c
-        on a.pdbfileid = c.pdbfileid and a.residueid_ion=c.residueid_ion
-        left join (select * from pdb_zinc_coordinate where site_count = 4 and resname_lig in ('CYS','HIS')) d
-        on a.pdbfileid = d.pdbfileid and a.residueid_ion=d.residueid_ion
-        where a.residueid_lig < b.residueid_lig and a.atomid_lig < b.atomid_lig and b.residueid_lig < c.residueid_lig and b.atomid_lig < c.atomid_lig
-        and c.residueid_lig < d.residueid_lig and c.atomid_lig < d.atomid_lig;
-
 drop table exp_site234;
-create table exp_site234 as
-        select pdbid, residueid_ion,x_ion,y_ion,z_ion,bench from exp_zinc_site2 union
-        select pdbid, residueid_ion,x_ion,y_ion,z_ion,bench from exp_zinc_site3 union
-        select pdbid, residueid_ion,x_ion,y_ion,z_ion,bench from exp_zinc_site4;
-
+create table exp_site234 as select distinct pdbid, residueid_ion,x_ion,y_ion,z_ion,bench from pdb_zinc_coordinate;
