@@ -53,7 +53,7 @@ X_test = X_test.astype(float)
 y_pred_fcnn = fcnn.predict(X_test)[:, 0]
 
 y_pred_proba = (y_pred_fcnn + y_pred_model1 + y_pred_model2 + y_pred_model3 + y_pred_model4) / 5
-y_pred_result = [1 if proba >= 0.5 else 0 for proba in y_pred_proba]
+y_pred_result = [1 if proba > 0.5 else 0 for proba in y_pred_proba]
 
 df = pd.DataFrame(data=y_pred_result,
             index=raw.index)
