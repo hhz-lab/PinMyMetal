@@ -43,7 +43,7 @@ As we have made modifications to the source code of Atomium to enhance its execu
 
 **This command copies the modified structures.py file to the Atomium package directory, replacing the existing file.**
 
-`cp /zinc_prediction/zinc_prediction/structures.py /path/to/atomium/`
+`cp /zinc_prediction/structures.py /path/to/atomium/`
 
 2. Run the shell script to complete the prediction
 ```
