@@ -8,7 +8,6 @@ import getopt
 import os, sys
 
 data_dir = "/zinc_prediction/script"
-loaded_model = pickle.load(open("/zinc_prediction/script/mvc.dat","rb"))
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
