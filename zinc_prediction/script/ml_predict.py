@@ -7,7 +7,7 @@ import numpy as np
 import getopt
 import os, sys
 
-data_dir = "/zinc_prediction/script"
+data_dir = "/zinc_prediction/script/"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -17,15 +17,15 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-models = load('models.joblib')
+models = load(data_dir + 'models.joblib')
 
 model1 = models['model1']
 model2 = models['model2']
 model3 = models['model3']
 model4 = models['model4']
-fcnn =load_model('fcnn.h5')
+fcnn =load_model(data_dir + 'fcnn.h5')
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql = "select id,resname_a,resname_b,a_ne2,a_nd1,a_sg,a_ce1,a_cd2,b_ne2,b_nd1,b_sg,b_ce1,b_cd2,\

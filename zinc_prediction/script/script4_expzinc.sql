@@ -11,12 +11,12 @@ update hydrophobic_pre t1 set zinc_tag=true from (select distinct id, (pearson_c
         where t1.id=t2.id and p_pearson > 0.5;
 
 alter table zinc_predict_site234_2 add zinc_tag bool default false;
-update zinc_predict_site234_2 t1 set zinc_tag=t2.zinc_tag from hydrophobic_pre t2 where t1.id=t2.id;
-update zinc_predict_site234_2 t1 set selected_site is false where zinc_tag is false and bench is false and site_count >=3;
+update zinc_predict_site234_2 t1 set zinc_tag=t2.zinc_tag from hydrophobic_pre t2 where t1.id=t2.id and t1.site_count >=3;
+--update zinc_predict_site234_2 t1 set selected_site is false where zinc_tag is false and bench is false and site_count >=3;
 
 alter table zinc_predict_site234_2 add p_value float;
 update zinc_predict_site234_2 t1 set p_value=t2.p_pearson from (select distinct id, (pearson_c+pearson_s)/2 as p_pearson from hydrophobic_proba) t2
-        where t1.id=t2.id;
+        where t1.id=t2.id and site_count >=3;
 
 drop table ml_predict_result;
 create table ml_predict_result 
@@ -27,8 +27,8 @@ create table ml_predict_result
 alter table zinc_predict_site234_2 add column ml_result smallint;
 
 update zinc_predict_site234_2 t1 set ml_result=t2.result from ml_predict_result t2 where t1.id=t2.id;
-
 update zinc_predict_site234_2 t1 set ml_result=1 where zinc_tag is true and site_count >=3;
+update zinc_predict_site234_2 t1 set ml_result=0 where zinc_tag is false and site_count >=3;
 
 drop table mvc_proba;
 create table mvc_proba
