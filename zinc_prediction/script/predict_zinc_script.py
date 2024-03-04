@@ -32,7 +32,7 @@ dict_seqlen = {}
 pid=inputid
 DBname="zinc"+str(pid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql=" select distinct pdbid, zinc_x,zinc_y,zinc_z,\
@@ -47,7 +47,7 @@ sql=" select distinct pdbid, zinc_x,zinc_y,zinc_z,\
 cur.execute(sql)
 data = cur.fetchall()
 
-sql2="select a.id,a.bench,chainid,resseq,chainids_lig,resseqs_lig,resnames_lig from exp_site234 a left join virus_metal b on a.pdbid=b.pdbid and a.residueid_ion=b.residueid_ion order by bench,id"
+sql2="select a.id,a.bench,chainid,resseq,chainids_lig,resseqs_lig,resnames_lig from exp_site234 a left join protein_metal b on a.pdbid=b.pdbid and a.residueid_ion=b.residueid_ion order by bench,id"
 cur.execute(sql2)
 data2 = cur.fetchall()
 
@@ -59,7 +59,7 @@ outputfile = output_dir + '/' + pid +'_zinc.pdb'
 lines=[]; list_r1=[]; list_r2=[]; resi_max=0; resq_max=0
 f = open(inputfile,'r')
 for r in f.readlines():
-    if r[0:6] == "CONECT" or r[0:6] == "MASTER":
+    if r[0:6] == "CONECT" or r[0:6] == "MASTER" or r[0:6] == "ENDMDL":
         pass
     else:
         lines.append(r)

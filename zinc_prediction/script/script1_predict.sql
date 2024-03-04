@@ -1,5 +1,5 @@
-drop table public.virus_metal_1 cascade;
-create table public.virus_metal_1 as (
+drop table public.protein_metal_1 cascade;
+create table public.protein_metal_1 as (
     select atomname,c.pdbid,chainid,resseq,residueid_ion,resname_ion,atomname_ion,atomid_ion,
            chainids_lig,resseqs_lig,residueids_lig,resnames_lig,atomnames_lig,atomids_lig,atomtypes_lig,
            resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, a.pdbfileid, a.bindingsiteid
@@ -18,53 +18,53 @@ create table public.virus_metal_1 as (
                on a.pdbfileid=e.pdbfileid and a.bindingsiteid=e.bindingsiteid
 );
 
-drop table public.virus_metal cascade;
-create table public.virus_metal as select * from  (
+drop table public.protein_metal cascade;
+create table public.protein_metal as select * from  (
     select distinct on (atomname,pdbid,chainid,resseq,residueid_ion,resname_ion,atomname_ion,atomid_ion,
            chainids_lig,resseqs_lig,residueids_lig,resnames_lig,atomnames_lig,atomids_lig,atomtypes_lig,
            resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, pdbfileid, bindingsiteid)
            atomname,pdbid,chainid,resseq,residueid_ion,resname_ion,atomname_ion,atomid_ion,
            chainids_lig,resseqs_lig,residueids_lig,resnames_lig,atomnames_lig,atomids_lig,atomtypes_lig,
-           resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, pdbfileid, bindingsiteid, chainid_virus
+           resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, pdbfileid, bindingsiteid, chainid_protein
     from (
         select *, count(*) as chainid_cnt
-        from (select *, unnest(chainids_lig) chainid_virus from public.virus_metal_1) a
+        from (select *, unnest(chainids_lig) chainid_protein from public.protein_metal_1) a
         group by atomname,pdbid,chainid,resseq,residueid_ion,resname_ion,atomname_ion,atomid_ion,
            chainids_lig,resseqs_lig,residueids_lig,resnames_lig,atomnames_lig,atomids_lig,atomtypes_lig,
-           resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, pdbfileid, bindingsiteid, chainid_virus
+           resolution,header,exp_method,which_metal,coordnum_inner, qv, qc, qe, pdbfileid, bindingsiteid, chainid_protein
     ) b
     order by which_metal,coordnum_inner, qv, qc, qe desc
 ) a where which_metal in (3,4,11,12,13) or (which_metal>=19 and which_metal<=31) or (which_metal>=37 and which_metal<=50) or (which_metal>=55 and which_metal<=84) or which_metal>=87;
 
-alter table virus_metal alter column exp_method type text;
-update virus_metal set exp_method='XRAY' where exp_method='1';
-update virus_metal set exp_method='NMR' where exp_method='2';
-update virus_metal set exp_method='ELEMICRO' where exp_method='3';
-update virus_metal set exp_method='SOLSCAT' where exp_method='5';
+alter table protein_metal alter column exp_method type text;
+update protein_metal set exp_method='XRAY' where exp_method='1';
+update protein_metal set exp_method='NMR' where exp_method='2';
+update protein_metal set exp_method='ELEMICRO' where exp_method='3';
+update protein_metal set exp_method='SOLSCAT' where exp_method='5';
 
-alter table public.virus_metal add column bench boolean default false;
-update public.virus_metal set bench=true where qv>=0.25 and qc>=0.355 and qe>=0.5;
-update public.virus_metal set bench=true where qv>=0.25 and qc>=0.355 and exp_method != 'XRAY';
+alter table public.protein_metal add column bench boolean default false;
+update public.protein_metal set bench=true where qv>=0.25 and qc>=0.355 and qe>=0.5;
+update public.protein_metal set bench=true where qv>=0.25 and qc>=0.355 and exp_method != 'XRAY';
 
-alter table public.virus_metal add column bench2 boolean default false;
-update public.virus_metal set bench2=true where qv>=0.5 and qc>=0.5 and qe>=0.5;
-update public.virus_metal set bench2=true where qv>=0.5 and qc>=0.5 and exp_method != 'XRAY';
+alter table public.protein_metal add column bench2 boolean default false;
+update public.protein_metal set bench2=true where qv>=0.5 and qc>=0.5 and qe>=0.5;
+update public.protein_metal set bench2=true where qv>=0.5 and qc>=0.5 and exp_method != 'XRAY';
 
-drop table virus_zinc;
-create table virus_zinc as
+drop table protein_zinc;
+create table protein_zinc as
         (select pdbfileid,pdbid, chainid, resseq,residueid_ion, resname_ion, atomname_ion,atomid_ion, unnest(chainids_lig) as chainid_lig, unnest(resseqs_lig) as resseq_lig,
-                unnest(residueids_lig) as residueid_lig ,unnest(resnames_lig) as resname_lig, unnest(atomnames_lig) as atomname_lig,unnest(atomids_lig) as atomid_lig,unnest(atomtypes_lig) as atomtype_lig,bench,bench2 from public.virus_metal where which_metal = 30);
+                unnest(residueids_lig) as residueid_lig ,unnest(resnames_lig) as resname_lig, unnest(atomnames_lig) as atomname_lig,unnest(atomids_lig) as atomid_lig,unnest(atomtypes_lig) as atomtype_lig,bench,bench2 from public.protein_metal where which_metal = 30);
 
-alter table virus_zinc alter column resseq_lig type int using resseq_lig::integer;
-alter table virus_zinc alter column atomid_lig type int using atomid_lig::integer;
-alter table virus_zinc alter column atomid_ion type int using atomid_ion::integer;
-alter table virus_zinc alter column residueid_lig type int using residueid_lig::integer;
+alter table protein_zinc alter column resseq_lig type int using resseq_lig::integer;
+alter table protein_zinc alter column atomid_lig type int using atomid_lig::integer;
+alter table protein_zinc alter column atomid_ion type int using atomid_ion::integer;
+alter table protein_zinc alter column residueid_lig type int using residueid_lig::integer;
 
 drop table pdb_zinc_coordinate;
 create table pdb_zinc_coordinate as (
         select t1.*, t2.x as x_lig, t2.y as y_lig, t2.z as z_lig, t3.x as x_ion, t3.y as y_ion, t3.z as z_ion
         from (select a.*,
-        c.residuetype from virus_zinc a
+        c.residuetype from protein_zinc a
         left join neighborhood.residues c
         on a.pdbfileid = c.pdbfileid and a.residueid_lig = c.residueid) t1
         left join neighborhood.atoms t2

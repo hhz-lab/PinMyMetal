@@ -15,13 +15,13 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 
 sql = """ select distinct pdbid,chainid_a, conc_comma(id||'_'||zinc_x||'_'||zinc_y||'_'||zinc_z) as zincs  from \
     (select distinct pdbid,chainid_a,id,zinc_x,zinc_y,zinc_z from zinc_predict_site234_2\
-    where id not in (select distinct pre_id from exp_pre_dist where dist <= 2.5)) a group by pdbid,chainid_a order by pdbid,chainid_a """
+    where ml_result=1 and id not in (select distinct pre_id from exp_pre_dist where dist <= 2.5)) a group by pdbid,chainid_a order by pdbid,chainid_a """
 
 
 cur.execute(sql)

@@ -41,7 +41,7 @@ update zinc_predict_site234_2 t1 set p_value=t2.proba from mvc_proba t2 where t1
 drop table exp_pre_site;
 create table exp_pre_site as
         select distinct pdbid,'pre' as site_type, conc_comma(id||'_'||zinc_x||'_'||zinc_y||'_'||zinc_z) as zincs  from
-    (select distinct pdbid,id,zinc_x,zinc_y,zinc_z from zinc_predict_site234_2) a group by pdbid
+    (select distinct pdbid,id,zinc_x,zinc_y,zinc_z from zinc_predict_site234_2 where ml_result=1) a group by pdbid
         union select distinct pdbid, 'exp' as site_type, conc_comma(residueid_ion||'_'||x_ion||'_'||y_ion||'_'||z_ion) as zincs from
         (select distinct pdbid,residueid_ion,x_ion,y_ion,z_ion from pdb_zinc_coordinate) a group by pdbid order by pdbid ;
 
