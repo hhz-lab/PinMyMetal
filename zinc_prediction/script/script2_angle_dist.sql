@@ -274,5 +274,28 @@ alter table zinc_predict_site234_2 add column angle2_score numeric default 0;
 alter table zinc_predict_site234_2 add column angle3_score numeric default 0;
 alter table zinc_predict_site234_2 add column  score numeric default 0;
 
+update zinc_predict_site234_2 t1
+        set atom_dist_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.atom_dist_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'atom_dist' ;
+update zinc_predict_site234_2 t1
+        set ca_dist_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.ca_dist_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'ca_dist' ;
+update zinc_predict_site234_2 t1
+        set cb_dist_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.cb_dist_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'cb_dist' ;
+update zinc_predict_site234_2 t1
+        set angle_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.angle_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'angle' ;
+update zinc_predict_site234_2 t1
+        set angle1_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.angle1_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'angle1' ;
+update zinc_predict_site234_2 t1
+        set angle2_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.angle2_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'angle2' ;
+update zinc_predict_site234_2 t1
+        set angle3_score = t2.value_score from (select * from dist_angle_score ) t2
+        where t1.angle3_2 = t2.value and t1.atom_type=t2.atom_type and value_type = 'angle3' ;
 
+update zinc_predict_site234_2 set
+        score = cast((atom_dist_score+ca_dist_score+cb_dist_score+angle_score+angle1_score+angle2_score+angle3_score) as decimal(18,3));
 
