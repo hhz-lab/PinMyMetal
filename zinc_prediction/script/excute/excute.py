@@ -2,6 +2,7 @@ import argparse
 import subprocess
 import requests
 import uniprot_wget
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-u", "--uniprot",help='UNIPROT ID')
