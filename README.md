@@ -14,7 +14,7 @@ You can also run it locally. Command line usage is described below.
 
 ## Create a PostgreSQL database
 
-###If you already have a PostgreSQL database with a version greater than or equal to 10, you can skip this step.
+### If you already have a PostgreSQL database with a version greater than or equal to 10, you can skip this step.
 
 **Linux Platform installation**
 ```
@@ -54,7 +54,7 @@ python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
 
-###For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.
+### For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.
 
 `python3 excute.py -p 3mnd`
 
