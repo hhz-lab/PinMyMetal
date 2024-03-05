@@ -68,9 +68,10 @@ The PDB codes and relevant characteristic data used for training and testing are
 # Note
 If you want to predict CIF (Crystallographic Information File) formatted files, you need to convert them to PDB (Protein Data Bank) format. Follow the steps below：
 ```
-cd zinc_predict
+cd PinMyMetal/zinc_prediction
 zcat ciftr-v2.053-prod-bin-linux.tar.gz | tar -xf -
-RCSBROOT=zinc_predict/ciftr-v2.053-prod-bin-linux/
+cd ciftr-v2.053-prod-bin-linux
+RCSBROOT=your_path/PinMyMetal/zinc_prediction/ciftr-v2.053-prod-bin-linux/
 export RCSBROOT
 PATH="$RCSBROOT/bin:"$PATH
 export PATH
