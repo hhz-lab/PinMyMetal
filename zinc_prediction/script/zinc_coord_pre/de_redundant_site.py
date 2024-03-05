@@ -4,7 +4,7 @@ from math import *
 import itertools
 import getopt
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -13,7 +13,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql = "select distinct pdbid, conc_comma(id||'_'||zinc_x||'_'||zinc_y||'_'||zinc_z) as zincs from zinc_predict_site234_2 where deredundant_site is true group by pdbid order by pdbid "
@@ -38,7 +38,7 @@ def merge_list(L):
 
     return [i for i in L if i != {0}]
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'redundant_site','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'redundant_site','w')
 
 re_zinc=[]
 for r in data:

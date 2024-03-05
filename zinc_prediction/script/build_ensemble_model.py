@@ -12,21 +12,19 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 import itertools
-from sklearn.metrics import confusion_matrix, recall_score, classification_report
+from sklearn.metrics import confusion_matrix, recall_score, classification_report, roc_curve, auc
+from sklearn.preprocessing import LabelBinarizer
 from math import sqrt
 from joblib import dump, load
 from keras.models import load_model, save_model
 from sklearn.model_selection import StratifiedShuffleSplit
 
 import keras
-from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import BatchNormalization
 from tensorflow.keras.optimizers import SGD, Adam, Nadam
 from keras import initializers
 from keras import regularizers
-from sklearn.metrics import classification_report, roc_curve, auc
-from sklearn.preprocessing import LabelBinarizer
 from keras.layers import Dense, Activation, Dropout, LSTM
 from keras.wrappers.scikit_learn import KerasClassifier
 

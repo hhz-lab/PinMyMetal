@@ -7,7 +7,7 @@ import os, sys
 import getopt
 
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -17,7 +17,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 
@@ -26,7 +26,7 @@ sql="select pdbid,conc_comma(id_a||'_'||id_b) as id_ab from pre_pre_dist where d
 cur.execute(sql)
 data = cur.fetchall()
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'contact_ab.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'contact_ab.csv','w')
 
 def bfs(graph, start):
     visited, queue = set(), [start]

@@ -10,8 +10,8 @@ import psycopg2 as pg
 import hydrophobicity
 from hydrophobicity import *
 
-data_dir = "/zinc_prediction/script"
-output_dir = "/zinc_prediction/script/excute/output_data"
+data_dir = "../"
+output_dir = "../excute/output_data/"
 
 output  = 'default'
 
@@ -52,8 +52,8 @@ cur.execute(sql2)
 data2 = cur.fetchall()
 
 
-inputfile = data_dir + '/' + pid + "_nb_result" +"/pdb"+ pid + ".ent"
-outputfile = output_dir + '/' + pid +'_zinc.pdb'
+inputfile = data_dir + pid + "_nb_result" +"/pdb"+ pid + ".ent"
+outputfile = output_dir + pid +'_zinc.pdb'
 
 
 lines=[]; list_r1=[]; list_r2=[]; resi_max=0; resq_max=0
@@ -75,7 +75,7 @@ for r in f.readlines():
     resq_zinc=int(resq_max)
 f.close()
 
-print_log = open(output_dir + '/'+pid+'_output.csv','w')
+print_log = open(output_dir +pid+'_output.csv','w')
 
 def dist(x,y):
     return sqrt((x[0]-y[0])**2 + (x[1]-y[1])**2 + (x[2]-y[2])**2)

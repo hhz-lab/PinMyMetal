@@ -1,10 +1,10 @@
 import statistics
-import wget
+import requests
 import os
 
 def get_uniprot_file(uniprot):
     url = "http://www.uniprot.org/uniprot/"+str(uniprot)+".txt"
-    inputfile = wget.download(url)
+    inputfile = requests.get(url)
 
     
     r_list=[]

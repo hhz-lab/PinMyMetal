@@ -5,7 +5,7 @@ import getopt
 import numpy as np
 import itertools
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -31,7 +31,7 @@ data = cur.fetchall()
 def dist(x,y):
     return sqrt((x[0]-y[0])**2 + (x[1]-y[1])**2 + (x[2]-y[2])**2)
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'pre_pre_dist.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'pre_pre_dist.csv','w')
 
 for i in data:
     pdbid=i[0]; chainid=i[1]; 

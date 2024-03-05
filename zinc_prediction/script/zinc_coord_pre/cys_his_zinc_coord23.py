@@ -11,7 +11,7 @@ import cys_his_2
 from itertools import product
 import getopt
 
-data_dir = '/zinc_prediction/script/'
+data_dir = '../'
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -21,7 +21,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 
@@ -138,7 +138,7 @@ class ZincCoords():
 
         return f_zinc
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'cys_his_zinc_coord23.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'cys_his_zinc_coord23.csv','w')
 
 for i in data:
     pid=i[0];

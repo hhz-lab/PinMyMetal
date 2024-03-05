@@ -1,5 +1,5 @@
 -- FUNCTION AGGREGATING TEXT FIELDS WITH COMMAS
-create language 'plpgsql';
+create language plpgsql;
 drop function comma_aggregate(text,text) cascade;
 create function comma_aggregate(text,text) returns text as '
 begin
@@ -26,7 +26,7 @@ create aggregate conc_comma (
 
 
 -- FUNCTION AGGREGATING TEXT FIELDS WITH COMMAS
-create language 'plpgsql';
+create language plpgsql;
 drop function semicolon_aggregate(text,text) cascade;
 create function semicolon_aggregate(text,text) returns text as '
 begin

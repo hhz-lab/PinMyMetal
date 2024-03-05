@@ -10,17 +10,17 @@ for opt, arg in options:
 
 pdbid=inputid
 
-script_dir="/zinc_prediction/script"
+script_dir="./../../"
 
 
-data_dir = script_dir + '/' +str(pdbid)+ "_nb_result"
+data_dir = script_dir +str(pdbid)+ "_nb_result"
 
-def psql_virusMED(sqlfile):
+def psql_db(sqlfile):
     dbname = "zinc"+str(pdbid)
     os.system("psql " + dbname + " < "+sqlfile)
 
-psql_virusMED(os.path.join(script_dir, "createNeighborhoodTables.sql"))
+psql_db(os.path.join(script_dir, "createNeighborhoodTables.sql"))
 
 sqlfile = os.path.join(data_dir, "copyNeighborhoodData.sql")
 
-psql_virusMED(sqlfile)
+psql_db(sqlfile)

@@ -7,7 +7,7 @@ import numpy as np
 import getopt
 import os, sys
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -63,8 +63,8 @@ df_proba = pd.DataFrame(data=y_pred_proba,
             index=raw.index)
 df_proba.columns = ['proba']
 
-result_file = data_dir + '/' +pdbid+ '_nb_result' + '/' + 'ml_result.csv'
+result_file = data_dir +pdbid+ '_nb_result' + '/' + 'ml_result.csv'
 df.to_csv(result_file)
 
-proba_file = data_dir + '/' + pdbid+ '_nb_result' + '/' + 'mvc_proba.csv'
+proba_file = data_dir + pdbid+ '_nb_result' + '/' + 'mvc_proba.csv'
 df_proba.to_csv(proba_file)

@@ -7,7 +7,7 @@ from scipy.stats import pearsonr
 import getopt
 import os, sys
 
-data_dir = "/zinc_prediction/script"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -17,7 +17,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql = "select distinct id,tag,c_value,solv,c_value_exp,solv_exp from hydrophobic_pre where site_count >= 3 order by id,tag"
@@ -25,7 +25,7 @@ sql = "select distinct id,tag,c_value,solv,c_value_exp,solv_exp from hydrophobic
 cur.execute(sql)
 data = cur.fetchall()
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'hydro_proba.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'hydro_proba.csv','w')
 
 def pearson_correlation(pre_list,exp_list):
     similarity,_=pearsonr(pre_list, exp_list)

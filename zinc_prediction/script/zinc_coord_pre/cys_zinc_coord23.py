@@ -6,7 +6,7 @@ import os, sys
 import copy
 import getopt
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -16,7 +16,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql = """select id,sg_x,sg_y,sg_z,sg_x1,sg_y1,sg_z1,sg_x2,sg_y2,sg_z2,
@@ -160,7 +160,7 @@ class ZincCoord:
         f1=angle_min(f1_list,a1,b1,c1,d1) 
         return f1
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'cys_zinc_coord23.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'cys_zinc_coord23.csv','w')
 
 for i in data:
     a1=Atom.Atom('CA', [0,0,0], 20, 1, None, 'C1', 1, element='C')

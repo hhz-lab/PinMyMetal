@@ -7,7 +7,7 @@ import copy
 from itertools import product
 import getopt
 
-data_dir = "/zinc_prediction/script/"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -18,7 +18,7 @@ pdbid=inputid
 DBname="zinc"+str(pdbid)
 
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 
@@ -115,7 +115,7 @@ def zinc_coord(f_a,f_b,f_c,f_d):
     f_zinc[2] = (f_a[2]+f_b[2]+f_c[2]+f_d[2])/4
     return f_zinc
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'zinc_coord4.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'zinc_coord4.csv','w')
 
 for i in data:
     pid=i[0]

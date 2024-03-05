@@ -8,7 +8,7 @@ from hydrophobicity import *
 import getopt
 
 
-data_dir = "/zinc_prediction/script"
+data_dir = "../"
 
 options, remainder = getopt.getopt(sys.argv[1:], 'i:o', ['input='])
 for opt, arg in options:
@@ -18,7 +18,7 @@ for opt, arg in options:
 pdbid=inputid
 DBname="zinc"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432'")
+conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
 cur = conn.cursor()
 
 sql = "select distinct id,pdbid,zinc_x,zinc_y,zinc_z,chainid_a from zinc_predict_site234_2 order by id "
@@ -26,14 +26,14 @@ sql = "select distinct id,pdbid,zinc_x,zinc_y,zinc_z,chainid_a from zinc_predict
 cur.execute(sql)
 data = cur.fetchall()
 
-print_log = open(data_dir + '/' +pdbid+ '_nb_result' + '/' + 'zinc_hydro.csv','w')
+print_log = open(data_dir +pdbid+ '_nb_result' + '/' + 'zinc_hydro.csv','w')
 for i in data:
     pid = i[0]
     pdb_code = ''
     pdb_code = i[1]
 
     mid_dir  = pdb_code[1:3]
-    pdbfile  = data_dir + '/' + pdb_code + "_nb_result" +"/pdb"+ pdb_code + ".ent"
+    pdbfile  = data_dir + pdb_code + "_nb_result" +"/pdb"+ pdb_code + ".ent"
     
     pdb1 = atomium.open(pdbfile)
     exp_zinc=(i[2],i[3],i[4])

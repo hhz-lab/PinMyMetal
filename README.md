@@ -12,40 +12,41 @@ You can also run it locally. Command line usage is described below.
 # How to install and run locally
 
 
-0. Create a PostgreSQL database
+## Create a PostgreSQL database
+
+###If you already have a PostgreSQL database with a version greater than or equal to 10, you can skip this step.
 
 **Linux Platform installation**
 ```
-sudo apt install postgresql
+sudo apt-get install postgresql-15
 ```
 For other installation methods, please visit [PostgreSQL official website](https://www.postgresql.org/)
 
 
-1. Preparing for predictions involves two steps to ensure a smooth and accurate process. Here are the steps you should take:
+## To configure the environment for running PinMyMetal, you can create a Conda environment using the provided environment.yml file. Follow these steps:
 
-**First, move the zinc_prediction folder to your root directory, and then modify the directory permissions to make it executable and writable.**
+**0. Ensure Conda is installed on your system.**
+
+**1. Run the following commands in your terminal:** 
 ```
-sudo mv zinc_prediction /zinc_prediction
-chmod -R 777 /zinc_prediction
+cd PinMyMetal
+conda env create -f environment.yml
 ```
+**2. Activate the new environment using the following command:**
+```
+conda activate PinMyMetal
+```
+**3. optimizing Atomium**
+Atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
+###Please perform the following actions to update the structures.py file in the PinMyMetal environment, as we have made modifications to the source code of Atomium to enhance its execution speed.
 
-Then optimizing Atomium
-atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
-As we have made modifications to the source code of Atomium to enhance its execution speed, please perform the following actions:
-
-**Install the Atomium package using pip3.**
-
-`pip3 install atomium`
-
-**Use the command to find the installation location of the Atomium package. Look for the "Location" field in the output, which indicates the installation path of the Atomium package.**
-
-`pip3 show atomium`
-
-**This command copies the modified structures.py file to the Atomium package directory, replacing the existing file.**
-
-`cp /zinc_prediction/structures.py /path/to/atomium/`
-
-2. Run the shell script to complete the prediction
+```
+conda info --envs  # Find the location of the PinMyMetal environment
+cd /path/to/PinMyMetal/environment  # Navigate to the PinMyMetal environment directory
+find . -type d -name "atomium"  # Find the installation directory of the atomium package
+cp /your_path/PinMyMetal/zinc_prediction/structures.py /path/to/PinMyMetal/environment/atomium/structures.py  # Replace the structures.py file
+```
+**4. Run the shell script to complete the prediction**
 ```
 cd zinc_prediction/script/excute
 python3 excute.py -p PDB_id 
@@ -53,7 +54,7 @@ python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
 
-**For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.**
+###For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.
 
 `python3 excute.py -p 3mnd`
 
@@ -66,9 +67,9 @@ The PDB codes and relevant characteristic data used for training and testing are
 # Note
 If you want to predict CIF (Crystallographic Information File) formatted files, you need to convert them to PDB (Protein Data Bank) format. Follow the steps below：
 ```
-cd /zinc_predict
+cd zinc_predict
 zcat ciftr-v2.053-prod-bin-linux.tar.gz | tar -xf -
-RCSBROOT=/zinc_predict/ciftr-v2.053-prod-bin-linux/
+RCSBROOT=zinc_predict/ciftr-v2.053-prod-bin-linux/
 export RCSBROOT
 PATH="$RCSBROOT/bin:"$PATH
 export PATH

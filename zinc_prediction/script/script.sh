@@ -1,35 +1,36 @@
 #!/bin/bash
 
+filename="$1"
+pdb="$2"
 
-pdb="$1"
+input_path=./excute/input_data
+output_path=./excute/output_data
 
-input_path=/zinc_prediction/script/excute/input_data
+cd ../
+data_dir=./
 
-
-
-data_dir=/zinc_prediction/script
-pdbfiledir=${data_dir}/${pdb}_nb_result
+pdbfiledir=${pdb}_nb_result
 mkdir -p ${pdbfiledir}
 touch ${pdbfiledir}/XXXX.cluster
-mv $input_path/${pdb}.ent  $pdbfiledir/pdb${pdb}.ent
-
-cd ${data_dir}
+mv $input_path/${filename}.ent  $pdbfiledir/pdb${pdb}.ent
 
 dbname=zinc${pdb}
 createdb ${dbname}
 
 
-psql ${dbname} < ${data_dir}/util.sql
-psql ${dbname} < ${data_dir}/c_value_exp.sql 
+psql ${dbname} < ${data_dir}util.sql
+psql ${dbname} < ${data_dir}c_value_exp.sql 
 
-export NEIGHBORHOOD=${data_dir}/neighborhood_0.8.0_src/
-cd ${data_dir}/neighborhood_0.8.0_src/src/
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+echo "$SCRIPT_DIR"
+export NEIGHBORHOOD="$SCRIPT_DIR/script/neighborhood_0.8.0_src/"
+cd neighborhood_0.8.0_src/src/
 
-./neighborhood ${pdbfiledir} pdb${pdb}.ent XXXX.cluster NULL NULL NULL
+./neighborhood ./../../${pdbfiledir} pdb${pdb}.ent XXXX.cluster NULL NULL NULL
 python3 ../../import_neighborhood.py -i ${pdb}
 
 
-cd ${pdbfiledir}
+cd ./../../${pdbfiledir}
 
 # prediction of zinc ligands
 psql ${dbname} < ../script1_predict.sql
@@ -63,5 +64,9 @@ psql ${dbname} < ../zinc_coord_pre/de_redundant_site_v3.sql
 
 
 python3 ../predict_zinc_script.py -i ${pdb}
+
+mv ../${output_path}/${pdb}_zinc.pdb ../${output_path}/${filename}_zinc.pdb
+mv ../${output_path}/${pdb}_output.csv ../${output_path}/${filename}_output.csv
+
 echo 'end'
 
