@@ -37,8 +37,9 @@ conda env create -f environment.yml
 conda activate PinMyMetal
 ```
 **3. optimizing Atomium**
-Atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
-###Please perform the following actions to update the structures.py file in the PinMyMetal environment, as we have made modifications to the source code of Atomium to enhance its execution speed.
+
+#### Atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
+#### Please perform the following actions to update the structures.py file in the PinMyMetal environment, as we have made modifications to the source code of Atomium to enhance its execution speed.
 
 ```
 conda info --envs  # Find the location of the PinMyMetal environment
