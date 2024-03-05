@@ -29,7 +29,7 @@ For other installation methods, please visit [PostgreSQL official website](https
 
 **1. Run the following commands in your terminal:** 
 ```
-cd PinMyMetal
+cd PinMyMetal/zinc_prediction
 conda env create -f environment.yml
 ```
 **2. Activate the new environment using the following command:**
