@@ -64,7 +64,7 @@ def printing_Kfold_scores(x_train_data, y_train_data):
         recall_accs = []
         for iteration, indices in enumerate(fold.split(y_train_data), start=1):
             lr = LogisticRegression(C= c_param, penalty = 'l2') 
-            lr.fit(x_train_data.iloc[indices[0]],y_train_data.iloc[indices[0]].values.ravel())
+            lr.fit(x_train_data.iloc[indices[0]],y_train_data.iloc[indices[0]])
             
             y_pred_undersample = lr.predict(x_train_data.iloc[indices[1]].values)
             
@@ -102,7 +102,7 @@ def create_keras_model():
     model.summary()
     INIT_LR = 0.005
     EPOCHS = 300
-    opt = Adam(lr=INIT_LR)
+    opt = Adam(learning_rate=INIT_LR)
     model.compile(loss="binary_crossentropy", optimizer=opt, metrics=["accuracy"])
     model._estimator_type="classifier"
     return model
