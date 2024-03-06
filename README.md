@@ -77,6 +77,7 @@ PATH="$RCSBROOT/bin:"$PATH
 export PATH
 CIFTr [-i filename] -extension pdb
 ```
+For more detailed information on using CIFTr to translate files from mmCIF format to PDB format, please refer to [RCSB PDB CIFTr](https://sw-tools.rcsb.org/apps/CIFTr/)
 # License
 All code is licensed under MIT license.
 
