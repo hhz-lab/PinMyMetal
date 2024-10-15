@@ -1,0 +1,20 @@
+CIFTr is an application program for translating files in mmCIF format into
+files in PDB format. CIFTr is available as a source distribution and as
+a binary distribution for several UNIX platforms.
+
+CIFTr is designed to work with mmCIF format files that include an extended
+set of data definitions developed specifically to support the exchange of
+PDB data. This dictionary, which was developed by the PDB and EBI/MSD
+groups, can be found at the PDB's mmCIF Resources site. Data files released
+as part of the PDB Uniformity Project which comply with this dictionary can
+be found on the PDB Beta ftp site.
+
+----------------------------------------------------------------------------
+
+CIFTr was created by Zukang Feng and John Westbrook of the Protein Data Bank
+Project.
+
+----------------------------------------------------------------------------
+
+Refer to README-source or README-binary, depending on the distribution, for
+details on installation, build, demos and application usage.

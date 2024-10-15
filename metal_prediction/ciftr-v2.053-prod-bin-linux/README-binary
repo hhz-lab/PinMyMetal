@@ -1,0 +1,176 @@
+
+             Installation and Usage Notes for the CifTr Application
+                            (Binary Distribution)
+
+
+1.  Installation
+
+a.  Uncompress and unbundle the distribution using the following command:
+
+        zcat ciftr-vX.X-XXX.tar.gz | tar -xf -
+
+    The result of this command is a subdirectory ciftr-vX.X-XXX in the
+    current directory, which has several items:
+
+        bin - subdirectory that contains the application executable "CifTr"
+        data - subdirectory that contains some data files needed by the
+          application. 
+        etc - subdirectory that contains utility scripts and application
+          software license agreement.
+        testdata - subdirectory that contains the sample input files to
+          the application.
+        testresult - subdirectory that contains the output files after the
+          application has been run on the sample input files.
+        test.sh - the test script used to demonstrate the application. It
+          uses the files from "testdata" subdirectory as its input and
+          stores its output to the files in "testresult" directory.
+
+
+b.  Set up the environment variables.
+
+    - Define RCSBROOT environment variable to point to the installation
+    directory. Assuming that the installation directory is
+    /home/username/ciftr-vX.X-XXX, execute in the shell:
+
+        For C shell users:
+          setenv RCSBROOT /home/username/ciftr-vX.X-XXX
+
+        For Bourne shell users:
+          RCSBROOT=/home/username/ciftr-vX.X-XXX; export RCSBROOT
+
+    - Add "bin" subdirectory to the PATH environment variable. 
+    Execute in the shell:
+
+        For C shell users:
+          setenv PATH "$RCSBROOT/bin:"$PATH
+
+        For Bourne shell users:
+          PATH="$RCSBROOT/bin:"$PATH; export PATH
+
+c.  Make binary data from ASCII data
+
+    - Position in the ciftr-vX.X-XXX/etc directory and run the script binary.sh:
+
+        cd ciftr-vX.X-XXX/etc
+        ./binary.sh
+
+    This command will create certain binary data files, using the ASCII data
+    files in data/ascii directory. The resulting files are stored in
+    data/binary directory. Note that it may take several minutes for this
+    step to complete. This step must be executed before the tool can be
+    utilized.
+
+
+2.  Demonstration
+
+a.  Position in the ciftr-vX.X-XXX directory and run the test.sh script:
+
+        cd ciftr-vX.X-XXX
+        ./test.sh
+
+    The script takes the names of all files in "testdata" subdirectory and
+    stores them in a separate file, which is used as in input to the "CifTr"
+    application. The resulting output files are stored in "testresult"
+    subdirectory.
+
+
+3.  Application Usage Notes
+
+Usage
+
+CIFTr [-i filename] [-f filelist] [-NO_CHAIN_ID] [-IUPAC_H_ATOMS]
+      [-output_path pathname] [-extension file_extension]
+      [-uncompress uncompress_command] [-compress compress_command]
+
+CIFTr can translate single or multiple files in mmCIF format into files in
+PDB format. CIFTr provides the option of producing a file with an empty
+chain ID field for structures with a single chain, and the option of
+producing files with standard IUPAC hydrogen nomenclature for standard
+L-amino acids.
+
+Options for file location, naming, and compression are also provided.
+
+For Single Files
+
+To translate a single file in mmCIF format to PDB format, at the UNIX prompt
+type:
+
+CIFTr -i filename
+
+The output file will have the same name as the input file with the extension
+.pdb (i.e., filename.pdb).
+
+For Multiple Files
+
+To translate several files in mmCIF format to PDB format, create a file that
+contains the names of all of the files that need to be translated. The file
+(in this example, named filelist) should resemble:
+
+first_file_name
+second_file_name
+third_file_name
+
+At the UNIX prompt, type:
+
+CIFTr -f filelist to translate the files in mmCIF format to files in PDB
+format.
+
+Chain ID
+
+CIFTr -i filename -NO_CHAIN_ID
+CIFTr -f filelist -NO_CHAIN_ID
+
+CIFTr can create PDB file(s) with an empty chain ID field if the file has
+only one chain. The program default is to include a chain ID.
+
+IUPAC Hydrogen Nomenclature
+
+CIFTr -i filename -IUPAC_H_ATOMS
+CIFTr -f filelist -IUPAC_H_ATOMS
+
+CIFTr can create PDB file(s) with standard IUPAC hydrogen nomenclature for
+standard L-amino acids. The default is to use conventional PDB nomenclature.
+Although the IUPAC option changes the H-atom numbering according to follow
+IUPAC conventions, the organization and spacing within the atom name field
+continues to follow PDB rules. This permits software applications to
+reliably locate the element symbol within the atom name.
+
+Other options: file location, naming, and compression
+
+CIFTr -i filename -output_path pathname
+CIFTr -f filelist -output_path pathname
+
+Option -output_path is used to specified the output directory. The default
+is the current directory.
+
+CIFTr -i filename -extension file_extension
+CIFTr -f filelist -extension file_extension
+
+Option -extension specifies the extension given to the generated PDB format
+file. The default is the input file name with the extension '.pdb'.
+
+For example, if the name of the mmCIF file is 1A00.cif, after translation,
+the default pdb file name will be 1A00.cif.pdb. The option -extension pdb,
+for example, would name the file 1A00.pdb.
+
+CIFTr -i filename -uncompress uncompress_command
+CIFTr -f filelist -uncompress uncompress_command
+
+Option -uncompress should be used if the input files are compressed. The
+program uses the system call 'uncompress_command' to uncompress files and
+assumes the 'uncompress_command' exists in the current environment. CIFTr
+uses the 'uncompress_command' as 'uncompress_command < input_file'.
+
+For example, CIFTr -i 1a00.cif.gz -uncompress gunzip would translate the
+uncompressed CIF format file 1a00.cif into 1a00.cif.pdb
+
+CIFTr -i filename -compress compress_command
+CIFTr -f filelist -compress compress_command
+
+Option -compress is used to compress the files created by the program. CIFTr
+uses the system call 'compress_command' to compress files and assumes the
+'compress_command' exists in the current environment. CIFTr uses the
+'compress_command' as 'compress_command -f output_file'.
+
+For example, CIFTr -i 1a00.cif -compress gzip would create a PDB format file
+compressed by the program gzip -- 1a00.cif.pdb.gz
