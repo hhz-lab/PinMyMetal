@@ -29,7 +29,7 @@ For other installation methods, please visit [PostgreSQL official website](https
 
 **1. Run the following commands in your terminal:** 
 ```
-cd PinMyMetal
+cd PinMyMetal/metal_prediction
 conda env create -f environment.yml
 ```
 **2. Activate the new environment using the following command:**
@@ -45,11 +45,11 @@ conda activate PinMyMetal
 conda info --envs  # Find the location of the PinMyMetal environment
 cd /path/to/PinMyMetal/environment  # Navigate to the PinMyMetal environment directory
 find . -type d -name "atomium"  # Find the installation directory of the atomium package
-cp /your_path/PinMyMetal/metal_prediction/structures.py /path/to/PinMyMetal/environment/atomium/structures.py  # Replace the structures.py file
+cp /your_path/PinMyMetal/metal_prediction/structures.py /path/to/atomium/structures.py  # Replace the structures.py file
 ```
 **4. Run the shell script to complete the prediction**
 ```
-cd metal_prediction/script/excute
+cd script/excute
 python3 excute.py -p PDB_id 
 python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
@@ -78,7 +78,6 @@ PATH="$RCSBROOT/bin:"$PATH
 export PATH
 CIFTr [-i filename] -extension pdb
 ```
-For more detailed information on using CIFTr to translate files from mmCIF format to PDB format, please refer to [RCSB PDB CIFTr](https://sw-tools.rcsb.org/apps/CIFTr/)
 # License
 All code is licensed under MIT license.
 
