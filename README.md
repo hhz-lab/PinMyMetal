@@ -55,14 +55,14 @@ python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
 
-### For example, using the PDB structure 3mnd as input, the output results are saved in the 'output_data' directory.
+### For example, using the PDB structure 3mnd as input, the output results are saved in the `output_data` directory.
 
 `python3 excute.py -p 2zp9`
 
-### When using the -f option to run your own uploaded file, please ensure the file is uploaded to the input_data directory. For example, to use an existing file in that directory, run:
+### When using the -f option to run your own uploaded file, please ensure the file is uploaded to the `input_data` directory. For example, to use an existing file in that directory, run:
 `python3 excute.py -f 7pw5.pdb`
 
-### One PDB file containing the predicted metal information is named X_metal.pdb, and another file storing detailed information about the binding sites is named X_output.file. For example, you may find 7pw5_metal.pdb and 7pw5_output.csv in the output_data directory. Generally, you can use only the X_metal.pdb file to analyze the prediction results. If any metal binding sites are predicted, they will appear at the end of the file, with the insertion code in column 27 marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
+### One PDB file containing the predicted metal information is named `X_metal.pdb`, and another file storing detailed information about the binding sites is named `X_output.file`. For example, you may find `7pw5_metal.pdb` and `7pw5_output.csv` in the `output_data` directory. Generally, you can use only the `X_metal.pdb` file to analyze the prediction results. If any metal binding sites are predicted, they will appear at the end of the file, with the insertion code in column 27 marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
 
 No non-standard hardware is required.
 Installation and prediction process can typically be completed within 1 hour on a "normal" desktop computer.
