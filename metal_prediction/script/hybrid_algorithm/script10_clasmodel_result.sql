@@ -14,7 +14,7 @@ update pre_sites t1 set metal_label='Zinc' from chedhclass_result t2 where t1.pr
 
 alter table pre_sites add column metal_pdb text;
 update pre_sites t1 set metal_pdb='MN' from chedhclass_result t2 where t1.pre_id=t2.id and t1.sitetype=t2.sitetype and t2.metal_label=1;
-update pre_sites t1 set metal_pdb='MIX' from chedhclass_result t2 where t1.pre_id=t2.id and t1.sitetype=t2.sitetype and t2.metal_label=2;
+update pre_sites t1 set metal_pdb='8B' from chedhclass_result t2 where t1.pre_id=t2.id and t1.sitetype=t2.sitetype and t2.metal_label=2;
 update pre_sites t1 set metal_pdb='CU' from chedhclass_result t2 where t1.pre_id=t2.id and t1.sitetype=t2.sitetype and t2.metal_label=6;
 update pre_sites t1 set metal_pdb='ZN' from chedhclass_result t2 where t1.pre_id=t2.id and t1.sitetype=t2.sitetype and t2.metal_label=7;
 

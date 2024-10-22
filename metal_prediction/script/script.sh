@@ -24,10 +24,10 @@ psql ${dbname} < ${SCRIPT_DIR}/c_value_exp_chedh.sql
 #SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 #echo "$SCRIPT_DIR"
 # Set the NEIGHBORHOOD environment variable
-export NEIGHBORHOOD="${SCRIPT_DIR}/neighborhood_0.8.1_src/"
+export NEIGHBORHOOD="${SCRIPT_DIR}/neighborhood_0.8.0_src/"
 
 # Change directory to the src folder within the neighborhood_0.8.0_src directory
-cd ${SCRIPT_DIR}/neighborhood_0.8.1_src/src/
+cd ${SCRIPT_DIR}/neighborhood_0.8.0_src/src/
 
 # Run the neighborhood program
 ./neighborhood ${pdbfiledir} pdb${pdb}.ent XXXX.cluster NULL NULL NULL
