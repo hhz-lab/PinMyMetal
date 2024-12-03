@@ -38,9 +38,9 @@ Both options will create functionally equivalent images, but the local build all
 
 ### Step 3: Modify Docker Configuration (if needed)
 - **If using the pre-built image, no changes are needed to**
-  docker-compose.yml.
+  `docker-compose.yml`.
 - **If building the image locally, comment out the image:**
-  `ghcr.io/hhz-lab/pinmymetal-conda-env:latest` line and replace it with image: `pinmymetal-conda-env`.
+  `ghcr.io/hhz-lab/pinmymetal-conda-env:latest` line and replace it with **image**: `pinmymetal-conda-env`.
   
 ### Step 4: Start Containers
 Navigate to the `metal_prediction` directory:
