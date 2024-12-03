@@ -36,7 +36,13 @@ You can either use the pre-pulled image from GitHub Container Registry or build 
   ```
 Both options will create the pinmymetal-conda-env image, but the local build gives you more control over the image customization.
 
-### Step 3: Start Containers
+### Step 3: Modify Docker Configuration (if needed)
+- **If using the pre-built image, no changes are needed to**
+  docker-compose.yml.
+- **If building the image locally, comment out the image:**
+  ghcr.io/hhz-lab/pinmymetal-conda-env:latest line and replace it with image: pinmymetal-conda-env.
+  
+### Step 4: Start Containers
 Navigate to the `metal_prediction` directory:
 ```bash
 cd metal_prediction
@@ -46,7 +52,7 @@ Start the containers using `docker-compose`:
 docker-compose up -d
 ```
 
-### Step 4: Access the Conda Environment
+### Step 5: Access the Conda Environment
 Enter the Conda container:
 ```bash
 docker exec -it conda_container bash
@@ -56,7 +62,7 @@ Activate the Conda environment:
 conda activate PinMyMetal
 ```
 
-### Step 5: Execute Scripts
+### Step 6: Execute Scripts
 Navigate to the `execute` directory and run the required scripts:
 ```bash
 cd execute
