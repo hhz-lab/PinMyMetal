@@ -17,13 +17,13 @@ This repository provides a fully containerized environment for the PinMyMetal pr
 
 Both options ensure seamless replication of the project environment for reliable local execution.
 
-## Quick Start Guide: Using Pre-Built Images
+## Installation Options: Pre-built Images or Local Build
 
 ### Step 1: Install Docker
 Ensure that Docker is installed on your system. You can follow the official [Docker installation guide](https://docs.docker.com/get-docker/) for your platform.
 
 ### Step 2: Build the Docker Image for Conda
-You can build the Docker image either by using the pre-pulled image from GitHub Container Registry or by building it locally.
+You can either use the pre-pulled image from GitHub Container Registry or build the image locally.
 - **Option 1: Using Pre-built Image**
   If you prefer not to build the image yourself, you can pull the pre-built image from GitHub Container Registry:
   ```bash
@@ -35,7 +35,6 @@ You can build the Docker image either by using the pre-pulled image from GitHub 
   docker build -t pinmymetal-conda-env -f conda_dockerfile .
   ```
 Both options will create the pinmymetal-conda-env image, but the local build gives you more control over the image customization.
-
 
 ### Step 3: Start Containers
 Navigate to the `metal_prediction` directory:
