@@ -1,7 +1,8 @@
-import psycopg2 as pg
 from collections import Counter
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -15,7 +16,9 @@ DBname="metal"+str(pdbid)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'get_premetal_chainid.csv')
 print_log = open(file_path,'w')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 
@@ -26,6 +29,8 @@ sql = """
 
 cur.execute(sql)
 data = cur.fetchall()
+cur.close()
+conn.close()
 
 # Function to select the chain based on given criteria
 def select_chain(*chains):

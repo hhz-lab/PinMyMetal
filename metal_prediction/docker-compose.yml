@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  postgresql_container:
+    image: postgres:15.3        # Use the official PostgreSQL image
+    container_name: postgresql_container        # Container name
+    environment:
+      POSTGRES_USER: myuser                     # Database username
+      POSTGRES_PASSWORD: 123456                 # Database password
+    ports:
+      - "5433:5432"                             # Map to the host port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistent volume for data storage
+    networks:
+      - metal_prediction
+
+  conda_container:
+    image: ghcr.io/hhz-lab/pinmymetal-conda-env:latest      # Use the Conda environment image we built
+    container_name: conda_container      # Container name
+    depends_on:
+      - postgresql_container                    # Ensure the PostgreSQL container starts first
+    environment:
+      DATABASE_HOST: postgresql_container       # PostgreSQL container hostname
+      DATABASE_PORT: 5432                       # Default PostgreSQL port
+      DATABASE_USER: myuser                     # Matches the PostgreSQL configuration
+      DATABASE_PASSWORD: 123456         # Database password
+    volumes:
+      - ./script:/script                              # Mount local code to the container
+    networks:
+      - metal_prediction
+    working_dir: /script                           # Set the working directory in the container
+    command: ["tail", "-f", "/dev/null"]
+
+
+networks:
+  metal_prediction:
+    driver: bridge
+
+volumes:
+  postgres_data:                                # Define the persistent volume
+

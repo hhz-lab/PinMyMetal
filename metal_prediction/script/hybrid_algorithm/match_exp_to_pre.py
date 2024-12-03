@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
-import psycopg2 as pg
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -15,7 +16,9 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'match_exp2pre.csv')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 
 sql_exp = """
 SELECT DISTINCT 'exp' AS sitetype, pdbid, id, x_ion AS metal_x, y_ion AS metal_y, z_ion AS metal_z,resname_ion FROM transition_metal_coord

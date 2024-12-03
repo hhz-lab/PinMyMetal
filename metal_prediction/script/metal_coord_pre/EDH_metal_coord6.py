@@ -1,12 +1,12 @@
 from math import *
 from Bio.PDB import *
 import numpy as np
-import psycopg2 as pg
 import os, sys
 import copy
 from itertools import product, combinations
 import getopt
-
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
@@ -18,7 +18,9 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'EDH_metal_coord6.csv')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 sql = """select id,
@@ -34,6 +36,8 @@ sql = """select id,
 
 cur.execute(sql)
 data = cur.fetchall()
+cur.close()
+conn.close()
 
 def atom_coord(coords_string):
     if not coords_string:

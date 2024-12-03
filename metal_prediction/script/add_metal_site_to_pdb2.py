@@ -3,11 +3,12 @@ import os, sys
 import getopt
 import gzip
 from math import *
-import psycopg2 as pg
+sys.path.append(os.path.join(os.path.dirname(__file__), "./utils"))
+import db_utils
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
-output_dir = os.path.join(script_directory, 'excute/output_data')
+output_dir = os.path.join(script_directory, 'execute/output_data')
 
 output  = 'default'
 
@@ -25,7 +26,8 @@ dict_seqlen = {}
 pdbid=inputid
 DBname="metal"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 sql="""
@@ -166,3 +168,5 @@ s=''.join(lines)
 with open(outputfile,'w') as f:
     f.write(s)
 
+cur.close()
+conn.close()

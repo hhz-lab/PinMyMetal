@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
-import psycopg2 as pg
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -15,9 +16,10 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 output_data = os.path.join(script_directory, '../', f"{pdbid}_nb_result")
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
-cur = conn.cursor()
 
+# Get a database connection
+conn = db_utils.create_connection(DBname)
+cur = conn.cursor()
 
 def fetch_data_and_process(sql_query, bins, n_bins, n_classes, output_file):
     # Execute the SQL query
@@ -74,4 +76,5 @@ output_file2 = os.path.join(output_data, 'chem_ch.csv')
 # Fetch data, process, and save to CSV files
 fetch_data_and_process(sql1, bins, n_bins, n_classes, output_file1)
 fetch_data_and_process(sql2, bins, n_bins, n_classes, output_file2)
-
+cur.close()
+conn.close()

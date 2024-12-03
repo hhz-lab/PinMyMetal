@@ -1,10 +1,11 @@
-import psycopg2 as pg
 import pandas as pd
 from joblib import dump, load
 from keras.models import load_model
 import numpy as np
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -28,7 +29,9 @@ SVM = models['SVM']
 FFNN =load_model(ch_FFNN)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'chmodel_result.csv')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 sql = """
@@ -41,6 +44,8 @@ select id, a_HIS,a_CYS,b_HIS,b_CYS,resitype_CC,resitype_CH,resitype_HH,
 
 cur.execute(sql)
 data = cur.fetchall()
+cur.close()
+conn.close()
 
 import pandas as pd
 

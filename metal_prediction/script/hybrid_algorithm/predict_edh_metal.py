@@ -1,10 +1,11 @@
-import psycopg2 as pg
 import pandas as pd
 from joblib import dump, load
 from keras.models import load_model
 import numpy as np
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +18,9 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'edhmodel_result.csv')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 edh_model = os.path.join(script_directory, 'ml_model_scripts', 'edh_models.joblib')
@@ -43,6 +46,8 @@ select id,site_count,ab_angle1,ab_angle2,ab_angle3,ac_angle1,ac_angle2,ac_angle3
 
 cur.execute(sql)
 data = cur.fetchall()
+cur.close()
+conn.close()
 
 raw = pd.DataFrame(data)
 raw.set_index([0], inplace=True) # Set the first column (id) as the index

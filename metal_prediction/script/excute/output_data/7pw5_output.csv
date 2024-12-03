@@ -1,3 +1,0 @@
-{"name":"pre","bench":"predict","status":"U","pid":"1","resseq":"3703","chain":"A  ","ligand":"571,A,GLU;614,A,ASP","metal_name":"Zinc","Metal Probability":"0.82"}
-{"name":"pre","bench":"predict","status":"U","pid":"2","resseq":"3704","chain":"B  ","ligand":"566,B,CYS;576,B,CYS;581,B,HIS;601,B,HIS","metal_name":"Zinc","Metal Probability":"0.95"}
-{"name":"pre","bench":"predict","status":"U","pid":"3","resseq":"3705","chain":"B  ","ligand":"611,B,CYS;613,B,CYS;641,B,CYS","metal_name":"Zinc","Metal Probability":"0.87"}

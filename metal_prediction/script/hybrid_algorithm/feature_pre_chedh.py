@@ -1,6 +1,5 @@
 import atomium
 from atomium import Model, Atom
-import psycopg2 as pg
 import os, sys
 import copy
 import hydrophobicity
@@ -15,6 +14,8 @@ from Bio.PDB import *
 import warnings
 from Bio import BiopythonWarning
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -27,7 +28,9 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 data_dir = os.path.join(script_directory, '../', f"{pdbid}_nb_result")
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 pdbfile = os.path.join(data_dir, f"pdb{pdbid}.ent")
@@ -46,7 +49,8 @@ chem_file =  os.path.join(data_dir, 'chem_pre_chedh.csv')
 
 cur.execute(sql)
 data = cur.fetchall()
-
+cur.close()
+conn.close()
 
 class ChainSelect(Select):
     def __init__(self, chain_letters):

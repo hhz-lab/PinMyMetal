@@ -1,6 +1,7 @@
 import os, sys
-import psycopg2 as pg
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -12,7 +13,8 @@ for opt, arg in options:
 pdbid=inputid
 DBname="metal"+str(pdbid)
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
 
 data_dir = os.path.join(script_directory, '../', f"{pdbid}_nb_result")
@@ -28,7 +30,8 @@ SELECT DISTINCT id, sitetype, pdbid, chainid_ion, resseq_ion, residueid_ion from
 """
 cur.execute(query)
 results = cur.fetchall()
-
+cur.close()
+conn.close()
 
 for result in results:
     id, sitetype, pdbid, chainid_ion, resseq_ion, residueid_ion = result

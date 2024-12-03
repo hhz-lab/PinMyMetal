@@ -1,0 +1,42 @@
+nohup: ignoring input
+#1 [internal] load .dockerignore
+#1 transferring context: 2B done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from conda_dockerfile
+#2 transferring dockerfile: 1.65kB done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/continuumio/miniconda3:24.1.2-0
+#3 DONE 2.9s
+
+#4 [1/7] FROM docker.io/continuumio/miniconda3:24.1.2-0@sha256:9d5f6b6ec999bb2b0b5ff5c6b272311f267644ae4647b037764d8a7992cd1624
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 71B done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [4/7] COPY environment.yml .
+#7 CACHED
+
+#8 [6/7] RUN conda env create -f environment.yml &&     conda clean -a -y
+#8 CACHED
+
+#9 [3/7] RUN apt-get update && apt-get install -y     gnupg lsb-release wget &&     echo "deb http://apt.postgresql.org/pub/repos/apt $(grep VERSION_CODENAME /etc/os-release | cut -d= -f2)-pgdg main" > /etc/apt/sources.list.d/pgdg.list &&     wget -qO - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - &&     apt-get update && apt-get install -y postgresql-client-15 &&     apt-get clean &&     rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [5/7] RUN apt-get update && apt-get install -y vim && apt-get clean
+#10 CACHED
+
+#11 [7/7] COPY structures.py /opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/atomium/structures.py
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 writing image sha256:41aac6b22bbf7982f54786e19a0b131ff94a42a8bcb19a25231fc62c99014b4f done
+#12 naming to docker.io/library/pinmymetal-conda-env done
+#12 DONE 0.0s

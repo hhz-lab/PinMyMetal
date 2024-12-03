@@ -1,11 +1,12 @@
 from math import *
 from Bio.PDB import *
 import numpy as np
-import psycopg2 as pg
 import os, sys
 import copy
 from itertools import product, combinations
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -20,9 +21,9 @@ DBname="metal"+str(pdbid)
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'calculate_angle_dist_site234.csv')
 print_log = open(file_path,'w')
 
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 cur = conn.cursor()
-
 
 
 sql = """select distinct a.id,metal_x,metal_y,metal_z,
@@ -43,6 +44,8 @@ sql = """select distinct a.id,metal_x,metal_y,metal_z,
 
 cur.execute(sql)
 data = cur.fetchall()
+cur.close()
+conn.close()
 
 def atom_coord(coords_string):
     #convert_coords_string_to_list

@@ -10,59 +10,88 @@ For easy and quick use without installation, use [the PinMyMetal web server](htt
 You can also run it locally. Command line usage is described below.
 
 # How to install and run locally
+This repository provides a fully containerized environment for the PinMyMetal project. Users can either:
+
+- **Pull pre-built Docker images from GitHub Container Registry** for quick setup, or  
+- **Build the images locally** using the provided `Dockerfile` and configuration files. 
+
+Both options ensure seamless replication of the project environment for reliable local execution.
+
+## Quick Start Guide: Using Pre-Built Images
+
+### Step 1: Install Docker
+Ensure that Docker is installed on your system. You can follow the official [Docker installation guide](https://docs.docker.com/get-docker/) for your platform.
+
+### Step 2: Build the Docker Image for Conda
+You can build the Docker image either by using the pre-pulled image from GitHub Container Registry or by building it locally.
+- **Option 1: Using Pre-built Image**
+  If you prefer not to build the image yourself, you can pull the pre-built image from GitHub Container Registry:
+  ```bash
+  docker pull ghcr.io/hhz-lab/pinmymetal-conda-env:latest
+  ```
+- **Option 2: Building the Image Locally**
+  Ensure you are in the PinMyMetal/metal_prediction directory and run:
+  ```bash
+  docker build -t pinmymetal-conda-env -f conda_dockerfile .
+  ```
+Both options will create the pinmymetal-conda-env image, but the local build gives you more control over the image customization.
 
 
-## Create a PostgreSQL database
-
-### If you already have a PostgreSQL database with a version greater than or equal to 10, you can skip this step.
-
-**Linux Platform installation**
+### Step 3: Start Containers
+Navigate to the `metal_prediction` directory:
+```bash
+cd metal_prediction
 ```
-sudo apt-get install postgresql-15
+Start the containers using `docker-compose`:
+```bash
+docker-compose up -d
 ```
-For other installation methods, please visit [PostgreSQL official website](https://www.postgresql.org/)
 
-
-## To configure the environment for running PinMyMetal, you can create a Conda environment using the provided environment.yml file. Follow these steps:
-
-**0. Ensure Conda is installed on your system.**
-
-**1. Run the following commands in your terminal:** 
+### Step 4: Access the Conda Environment
+Enter the Conda container:
+```bash
+docker exec -it conda_container bash
 ```
-cd PinMyMetal/metal_prediction
-conda env create -f environment.yml
-```
-**2. Activate the new environment using the following command:**
-```
+Activate the Conda environment:
+```bash
 conda activate PinMyMetal
 ```
-**3. optimizing Atomium**
 
-#### Atomium is a molecular modeller and file parser, capable of reading from and writing to .pdb, .cif and .mmtf files.
-#### Please perform the following actions to update the structures.py file in the PinMyMetal environment, as we have made modifications to the source code of Atomium to enhance its execution speed.
-
-```
-conda info --envs  # Find the location of the PinMyMetal environment
-cd /path/to/PinMyMetal/environment  # Navigate to the PinMyMetal environment directory
-find . -type d -name "atomium"  # Find the installation directory of the atomium package
-cp /your_path/PinMyMetal/metal_prediction/structures.py /path/to/atomium/structures.py  # Replace the structures.py file
-```
-**4. Run the shell script to complete the prediction**
-```
-cd script/excute
+### Step 5: Execute Scripts
+Navigate to the `execute` directory and run the required scripts:
+```bash
+cd execute
 python3 excute.py -p PDB_id 
 python3 excute.py -u uniprot_id
 python3 excute.py -f PDB_file
 ```
+#### Example 1: Using PDB Structure as Input
+To predict metal binding sites for a specific PDB structure (e.g., `2zp9`), use the `-p` option:
+```bash
+python3 execute.py -p 2zp9
+```
+The results will be saved in the `output_data` directory. A corresponding PDB file containing the predicted metal information will be named `X_metal.pdb`, and detailed binding site information will be stored in `X_output.csv`.
 
-### For example, using the PDB structure 3mnd as input, the output results are saved in the `output_data` directory.
+#### Example 2: Using Your Own Uploaded File
+If you want to use your own uploaded PDB file, ensure the file is placed in the `input_data` directory. For example, to use a file named `7pw5.pdb`, run:
+```bash
+python3 execute.py -f 7pw5.pdb
+```
+The output files will be generated in the `output_data` directory. For instance, you may find the files `7pw5_metal.pdb` and `7pw5_output.csv` in the directory.
 
-`python3 excute.py -p 2zp9`
+#### Output Files Description
+- **`X_metal.pdb`**: This file contains the predicted metal binding information. If any metal binding sites are predicted, they will appear at the end of the file. The insertion code in column 27 will be marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
+- **`X_output.csv`**: This file stores detailed information about the predicted binding sites.
 
-### When using the -f option to run your own uploaded file, please ensure the file is uploaded to the `input_data` directory. For example, to use an existing file in that directory, run:
-`python3 excute.py -f 7pw5.pdb`
+You can generally use only the `X_metal.pdb` file to analyze the prediction results. The `X_output.csv` file provides additional details for further analysis.
 
-### One PDB file containing the predicted metal information is named `X_metal.pdb`, and another file storing detailed information about the binding sites is named `X_output.file`. For example, you may find `7pw5_metal.pdb` and `7pw5_output.csv` in the `output_data` directory. Generally, you can use only the `X_metal.pdb` file to analyze the prediction results. If any metal binding sites are predicted, they will appear at the end of the file, with the insertion code in column 27 marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
+
+## File Descriptions
+
+- **`conda_dockerfile`**: Dockerfile for building the Conda container with all dependencies for PinMyMetal.
+- **`docker-compose.yml`**: Configuration file to set up and manage the Conda and PostgreSQL containers.
+- **`execute/`**: Directory containing the input files, execution scripts, and output files for the PinMyMetal project.
+
 
 No non-standard hardware is required.
 Installation and prediction process can typically be completed within 1 hour on a "normal" desktop computer.

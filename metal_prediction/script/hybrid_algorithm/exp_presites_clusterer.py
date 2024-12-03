@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cdist
-import psycopg2 as pg
 from itertools import combinations
 import os, sys
 import getopt
+sys.path.append(os.path.join(os.path.dirname(__file__), "../utils"))
+import db_utils
 
 # Get the directory where the script file resides
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +18,9 @@ pdbid=inputid
 DBname="metal"+str(pdbid)
 
 file_path = os.path.join(script_directory, '../', f"{pdbid}_nb_result", 'metalsites_cluster.csv')
-conn = pg.connect("dbname="+DBname+" password='' port='5432' host='/var/run/postgresql'")
+
+# Get a database connection
+conn = db_utils.create_connection(DBname)
 
 # Execute SQL queries
 sql1 = """
