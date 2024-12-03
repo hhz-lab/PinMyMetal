@@ -30,17 +30,17 @@ You can either use the pre-pulled image from GitHub Container Registry or build 
   docker pull ghcr.io/hhz-lab/pinmymetal-conda-env:latest
   ```
 - **Option 2: Building the Image Locally**
-  Ensure you are in the PinMyMetal/metal_prediction directory and run:
+  Ensure you are in the `PinMyMetal/metal_prediction` directory and run:
   ```bash
   docker build -t pinmymetal-conda-env -f conda_dockerfile .
   ```
-Both options will create the pinmymetal-conda-env image, but the local build gives you more control over the image customization.
+Both options will create functionally equivalent images, but the local build allows for customization of the image.
 
 ### Step 3: Modify Docker Configuration (if needed)
 - **If using the pre-built image, no changes are needed to**
   docker-compose.yml.
 - **If building the image locally, comment out the image:**
-  ghcr.io/hhz-lab/pinmymetal-conda-env:latest line and replace it with image: pinmymetal-conda-env.
+  `ghcr.io/hhz-lab/pinmymetal-conda-env:latest` line and replace it with image: `pinmymetal-conda-env`.
   
 ### Step 4: Start Containers
 Navigate to the `metal_prediction` directory:
