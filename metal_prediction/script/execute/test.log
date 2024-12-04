@@ -1,0 +1,2284 @@
+CREATE DATABASE
+ERROR:  extension "plpgsql" already exists
+ERROR:  function comma_aggregate(text, text) does not exist
+CREATE FUNCTION
+CREATE AGGREGATE
+ERROR:  extension "plpgsql" already exists
+ERROR:  function semicolon_aggregate(text, text) does not exist
+CREATE FUNCTION
+CREATE AGGREGATE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE AGGREGATE
+CREATE AGGREGATE
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE TABLE
+ERROR:  role "huihui_z" does not exist
+COPY 126
+2zp9: PDB string read successfully.
+2zp9: Cluster string read successfully.
+2zp9: Assembly string read successfully.
+2zp9: Molprobity probe hydrogen bond/vdw interaction read successfully.
+2zp9: contact string read successfully.
+2zp9: Ligand angle calculation successfully.
+2zp9: Bond valence calculation successfully.
+2zp9: Ion binding site calculation successfully.
+2zp9: Water site calculation successfully.
+2zp9: Neighbor calculation successfully.
+
+ Spacegroup information obtained from library file: 
+ Logical Name: SYMINFO   Filename: /script/neighborhood_0.8.0_src/lib/syminfo.lib
+
+Processing chain C, resi 54, resn _ZN
+Processing chain D, resi 54, resn _ZN
+Processing chain E, resi 54, resn _ZN
+Processing chain I, resi 54, resn _ZN
+Processing chain J, resi 54, resn _ZN
+valence 3A value: 1.952739
+valence 3A value: 2.168830
+valence 3A value: 2.763791
+valence 3A value: 2.911908
+valence 3A value: 1.419080
+valence 3A value: 2.347811
+valence 3A value: 2.860761
+valence 3A value: 2.997793
+valence 3A value: 0.731655
+valence 3A value: 1.107600
+valence 3A value: 1.685136
+valence 3A value: 2.228415
+valence 3A value: 0.347017
+valence 3A value: 4.673249
+valence 3A value: 5.166421
+valence 3A value: 0.409897
+valence 3A value: 1.110617
+valence 3A value: 1.471328
+valence 3A value: 2.404575
+#CCDINFO(0):pdb2zp9.ent
+#GENEONTOLOGY:0
+#ASSEMBLY:0
+#CAVITY:0
+#COMPONENT:2
+#FUNCTION:0
+#KEYWORD:10
+#CDHIT_CHAIN:15
+#SYMOP_CHAIN:0
+#MOLECULE:20
+#DOMAIN:0
+#RESIDUE:752
+#ATOM:5728
+#RESIDUE_NEIGHBOR:3554
+#ATOM_NEIGHBOR:24828
+#MOLPROBITY:0
+#NEIGHBOR_VECTOR:28404
+#LIGAND_BONDANGLE:102
+#ION_BINDINGSITE:5
+#ION_BINDINGSITE_PROFILES:5
+#ION_BINDINGSITE_LIGRESIDUES:19
+#ION_BINDINGSITE_LIGMOIETIES:19
+#ION_BINDINGSITE_LIGATOMS:19
+#ION_BINDINGSITE_LIGNEIGHBORS:9
+#ION_BINDINGSITE_LIGATOMNEIGHBORS:27
+#ION_BONDVALENCE:34
+#WATER_BINDINGSITE:0
+#WATER_BONDVALENCE:0
+#DISTANCE:4.500000
+#PDBFILE(0):pdb2zp9.ent
+Executed /script/createNeighborhoodPartialTables.sql successfully.
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE FUNCTION
+ d45 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d44 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d43 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d42 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d41 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d40 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d39 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d38 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d37 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d36 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d35 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d34 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d33 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d32 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d31 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d30 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d29 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d28 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d27 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d26 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d25 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d24 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d23 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d22 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d21 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d20 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d19 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d18 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d17 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d16 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d15 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d14 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d13 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d12 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d11 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d10 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d09 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d08 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d07 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d06 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d05 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d04 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d03 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d02 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d01 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+Executed /script/2zp9_nb_result/copyNeighborhoodData.sql successfully.
+SET
+COPY 1
+COPY 2
+COPY 0
+COPY 15
+COPY 752
+COPY 5728
+COPY 3554
+COPY 24828
+COPY 34
+COPY 5
+COPY 5
+COPY 19
+
+ERROR:  table "all_metal_1" does not exist
+SELECT 5
+ERROR:  table "all_metal" does not exist
+SELECT 5
+ALTER TABLE
+UPDATE 5
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 4
+UPDATE 0
+ALTER TABLE
+UPDATE 4
+UPDATE 0
+ERROR:  table "transition_metal" does not exist
+SELECT 19
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "transition_metal_coord" does not exist
+SELECT 19
+ALTER TABLE
+UPDATE 19
+UPDATE 19
+ALTER TABLE
+UPDATE 19
+ERROR:  table "ch_site" does not exist
+SELECT 98
+ERROR:  table "ch_site_result_2" does not exist
+SELECT 49
+ERROR:  table "ch_site_result_3" does not exist
+SELECT 32
+ERROR:  table "ch_site_result_4" does not exist
+SELECT 8
+ERROR:  table "ch_site_2" does not exist
+SELECT 1
+ERROR:  table "ch_site_3" does not exist
+SELECT 0
+ERROR:  table "ch_site234" does not exist
+SELECT 9
+ERROR:  table "zncu_predict_sites" does not exist
+SELECT 9
+DELETE 1
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+UPDATE 0
+UPDATE 0
+ERROR:  table "pre_zncu_coord_sites" does not exist
+SELECT 8
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ERROR:  table "edh_site" does not exist
+SELECT 226
+ERROR:  table "edh_site_result_2" does not exist
+SELECT 113
+ERROR:  table "edh_site_result_3" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_4" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_5" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_6" does not exist
+SELECT 0
+ERROR:  table "edh_site_2" does not exist
+SELECT 113
+ERROR:  table "edh_site_3" does not exist
+SELECT 0
+ERROR:  table "edh_site_4" does not exist
+SELECT 0
+ERROR:  table "edh_site_5" does not exist
+SELECT 0
+ERROR:  table "edh_site23456" does not exist
+SELECT 113
+ERROR:  table "metal_predict_sites" does not exist
+SELECT 113
+DELETE 11
+ALTER TABLE
+UPDATE 102
+ALTER TABLE
+UPDATE 15
+UPDATE 0
+UPDATE 87
+ERROR:  table "pre_metal_coord_sites" does not exist
+SELECT 34
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+UPDATE 9
+UPDATE 9
+ALTER TABLE
+UPDATE 11
+ALTER TABLE
+UPDATE 11
+UPDATE 14
+UPDATE 14
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 16
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 16
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 16
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 16
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 34
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 14
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ERROR:  table "ch_metal_coord23" does not exist
+CREATE TABLE
+COPY 0
+ERROR:  table "ch_metal_coord4" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  table "zncu_predict_sites_2" does not exist
+SELECT 8
+ERROR:  table "edh_metal_coord" does not exist
+CREATE TABLE
+COPY 34
+ERROR:  table "metal_coord6" does not exist
+CREATE TABLE
+COPY 0
+ERROR:  table "metal_predict_sites_2" does not exist
+SELECT 34
+ERROR:  table "hydro_pre_chedh" does not exist
+CREATE TABLE
+COPY 882
+ERROR:  table "chemtype_pre_chedh" does not exist
+CREATE TABLE
+COPY 1190
+ALTER TABLE
+UPDATE 168
+UPDATE 714
+ALTER TABLE
+UPDATE 168
+UPDATE 714
+ALTER TABLE
+UPDATE 882
+ALTER TABLE
+UPDATE 882
+ERROR:  table "hydro_proba_chedh" does not exist
+CREATE TABLE
+COPY 8
+ALTER TABLE
+UPDATE 168
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 8
+ERROR:  table "chedh_angel_dist" does not exist
+CREATE TABLE
+COPY 42
+ERROR:  table "chedh_features" does not exist
+SELECT 42
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 0
+UPDATE 8
+UPDATE 0
+UPDATE 8
+UPDATE 0
+UPDATE 8
+UPDATE 0
+UPDATE 8
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 8
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 16
+UPDATE 9
+UPDATE 9
+UPDATE 9
+UPDATE 14
+UPDATE 11
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 9
+UPDATE 25
+UPDATE 0
+2024-12-04 03:19:40.042951: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 03:19:42.344348: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Data is empty. Skipping execution.
+2024-12-04 03:19:43.658607: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 03:19:45.845039: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+1/2 [==============>...............] - ETA: 0s2/2 [==============================] - 0s 22ms/step
+ERROR:  table "chmodel_result" does not exist
+CREATE TABLE
+chmodel_result.csv: No such file or directory
+ALTER TABLE
+UPDATE 0
+UPDATE 8
+ERROR:  table "edhmodel_result" does not exist
+CREATE TABLE
+COPY 34
+ALTER TABLE
+UPDATE 34
+UPDATE 0
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 0
+/script/hybrid_algorithm/match_exp_to_pre.py:41: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  exp_sites = pd.read_sql(sql_exp, conn)
+/script/hybrid_algorithm/match_exp_to_pre.py:42: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  edh_sites = pd.read_sql(sql_edh, conn)
+/script/hybrid_algorithm/match_exp_to_pre.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  ch_sites = pd.read_sql(sql_ch, conn)
+/script/hybrid_algorithm/match_exp_to_pre.py:45: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  pred_sites = pd.concat([edh_sites, ch_sites])
+/script/hybrid_algorithm/exp_presites_clusterer.py:46: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df1 = pd.read_sql(sql1, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:47: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df2 = pd.read_sql(sql2, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:48: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df3 = pd.read_sql(sql3, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:51: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df1, df2, df3],ignore_index=True)
+ERROR:  table "pre_chain" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  column "chainid_ion" of relation "metal_predict_sites_2" does not exist
+ALTER TABLE
+UPDATE 0
+ERROR:  column "chainid_ion" of relation "zncu_predict_sites_2" does not exist
+ALTER TABLE
+UPDATE 8
+ERROR:  table "match_exp2pre" does not exist
+CREATE TABLE
+COPY 5
+ALTER TABLE
+UPDATE 5
+ERROR:  table "metals_cluster" does not exist
+CREATE TABLE
+COPY 13
+ERROR:  table "pre_sites" does not exist
+SELECT 8
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 5
+ERROR:  table "exp_sites" does not exist
+SELECT 5
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 4
+UPDATE 1
+UPDATE 3
+ALTER TABLE
+UPDATE 4
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 5
+ERROR:  table "presites_info_neighbor" does not exist
+CREATE TABLE
+COPY 8
+2zp9: PDB string read successfully.
+2zp9: Cluster string read successfully.
+2zp9: Assembly string read successfully.
+2zp9: Molprobity probe hydrogen bond/vdw interaction read successfully.
+2zp9: contact string read successfully.
+2zp9: Ligand angle calculation successfully.
+2zp9: Bond valence calculation successfully.
+2zp9: Ion binding site calculation successfully.
+2zp9: Water site calculation successfully.
+2zp9: Neighbor calculation successfully.
+
+ Spacegroup information obtained from library file: 
+ Logical Name: SYMINFO   Filename: /script/neighborhood_0.8.0_src/lib/syminfo.lib
+
+Processing chain C, resi 54, resn _ZN
+Processing chain D, resi 54, resn _ZN
+Processing chain E, resi 54, resn _ZN
+Processing chain I, resi 54, resn _ZN
+Processing chain J, resi 54, resn _ZN
+Processing chain M, resi 101, resn _ZN
+Processing chain O, resi 102, resn _ZN
+Processing chain C, resi 103, resn _ZN
+Processing chain J, resi 104, resn _ZN
+Processing chain E, resi 105, resn _ZN
+Processing chain D, resi 106, resn _ZN
+Processing chain I, resi 107, resn _ZN
+Processing chain H, resi 108, resn _ZN
+valence 3A value: 1.952739
+valence 3A value: 2.168830
+valence 3A value: 2.763791
+valence 3A value: 2.911908
+valence 3A value: 1.419080
+valence 3A value: 2.347811
+valence 3A value: 2.860761
+valence 3A value: 2.997793
+valence 3A value: 0.731655
+valence 3A value: 1.107600
+valence 3A value: 1.685136
+valence 3A value: 2.228415
+valence 3A value: 0.347017
+valence 3A value: 4.673249
+valence 3A value: 5.166421
+valence 3A value: 0.409897
+valence 3A value: 1.110617
+valence 3A value: 1.471328
+valence 3A value: 2.404575
+valence 3A value: 0.585942
+valence 3A value: 1.336274
+valence 3A value: 2.068267
+valence 3A value: 2.805083
+valence 3A value: 1.214829
+valence 3A value: 2.400575
+valence 3A value: 3.823048
+valence 3A value: 4.987496
+valence 3A value: 0.378206
+valence 3A value: 1.428761
+valence 3A value: 1.955963
+valence 3A value: 2.585275
+valence 3A value: 0.435839
+valence 3A value: 2.023541
+valence 3A value: 2.443911
+valence 3A value: 2.909207
+valence 3A value: 0.416449
+valence 3A value: 1.650884
+valence 3A value: 2.756603
+valence 3A value: 3.101267
+valence 3A value: 0.439341
+valence 3A value: 1.332379
+valence 3A value: 2.108541
+valence 3A value: 2.577752
+valence 3A value: 0.587514
+valence 3A value: 1.389850
+valence 3A value: 1.882661
+valence 3A value: 2.413387
+valence 3A value: 0.411149
+valence 3A value: 1.042850
+valence 3A value: 2.005463
+valence 3A value: 2.522729
+#CCDINFO(0):pdb2zp9.ent
+#GENEONTOLOGY:0
+#ASSEMBLY:0
+#CAVITY:0
+#COMPONENT:2
+#FUNCTION:0
+#KEYWORD:10
+#CDHIT_CHAIN:15
+#SYMOP_CHAIN:0
+#MOLECULE:28
+#DOMAIN:0
+#RESIDUE:760
+#ATOM:5736
+#RESIDUE_NEIGHBOR:3598
+#ATOM_NEIGHBOR:24948
+#MOLPROBITY:0
+#NEIGHBOR_VECTOR:28524
+#LIGAND_BONDANGLE:305
+#ION_BINDINGSITE:13
+#ION_BINDINGSITE_PROFILES:13
+#ION_BINDINGSITE_LIGRESIDUES:51
+#ION_BINDINGSITE_LIGMOIETIES:51
+#ION_BINDINGSITE_LIGATOMS:51
+#ION_BINDINGSITE_LIGNEIGHBORS:25
+#ION_BINDINGSITE_LIGATOMNEIGHBORS:75
+#ION_BONDVALENCE:95
+#WATER_BINDINGSITE:0
+#WATER_BONDVALENCE:0
+#DISTANCE:4.500000
+#PDBFILE(0):pdb2zp9.ent
+ERROR:  table "chemfeatures_pre_ch" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  table "chemfeatures_pre_edh" does not exist
+CREATE TABLE
+COPY 34
+ERROR:  table "ion_bindingsites" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  table "ionresidueid_id" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  table "classmodel_feature_neighbor_ch" does not exist
+SELECT 8
+ALTER TABLE
+UPDATE 0
+UPDATE 8
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "classmodel_feature_neighbor_edh" does not exist
+SELECT 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "classmodel_feature_neighbor_chedh" does not exist
+SELECT 8
+2024-12-04 03:19:50.563414: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but BalancedRandomForestClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but EasyEnsembleClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but BalancedRandomForestClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but EasyEnsembleClassifier was fitted with feature names
+  warnings.warn(
+ERROR:  table "chedhclass_result" does not exist
+CREATE TABLE
+COPY 8
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 8
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+mv: '/script/execute/output_data/2zp9_metal.pdb' and '/script/execute/output_data/2zp9_metal.pdb' are the same file
+mv: '/script/execute/output_data/2zp9_output.csv' and '/script/execute/output_data/2zp9_output.csv' are the same file
+DROP DATABASE
+end
+CREATE DATABASE
+ERROR:  extension "plpgsql" already exists
+ERROR:  function comma_aggregate(text, text) does not exist
+CREATE FUNCTION
+CREATE AGGREGATE
+ERROR:  extension "plpgsql" already exists
+ERROR:  function semicolon_aggregate(text, text) does not exist
+CREATE FUNCTION
+CREATE AGGREGATE
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE AGGREGATE
+CREATE AGGREGATE
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE TABLE
+ERROR:  role "huihui_z" does not exist
+COPY 126
+yxhw: PDB string read successfully.
+yxhw: Cluster string read successfully.
+yxhw: Assembly string read successfully.
+yxhw: Molprobity probe hydrogen bond/vdw interaction read successfully.
+yxhw: contact string read successfully.
+yxhw: Ligand angle calculation successfully.
+yxhw: Bond valence calculation successfully.
+yxhw: Ion binding site calculation successfully.
+yxhw: Water site calculation successfully.
+yxhw: Neighbor calculation successfully.
+
+ Spacegroup information obtained from library file: 
+ Logical Name: SYMINFO   Filename: /script/neighborhood_0.8.0_src/lib/syminfo.lib
+
+Processing chain A, resi 3701, resn IHP
+Processing chain A, resi 3702, resn 88C
+Processing chain C, resi 601, resn ATP
+Processing chain C, resi 602, resn _MG
+valence 3A value: 0.341461
+valence 3A value: 0.715536
+valence 3A value: 0.796534
+valence 3A value: 0.971450
+#CCDINFO(0):pdbyxhw.ent
+#GENEONTOLOGY:0
+#ASSEMBLY:0
+#CAVITY:0
+#COMPONENT:3
+#FUNCTION:4
+#KEYWORD:25
+#CDHIT_CHAIN:3
+#SYMOP_CHAIN:0
+#MOLECULE:7
+#DOMAIN:0
+#RESIDUE:2960
+#ATOM:21548
+#RESIDUE_NEIGHBOR:13087
+#ATOM_NEIGHBOR:92475
+#MOLPROBITY:0
+#NEIGHBOR_VECTOR:106981
+#LIGAND_BONDANGLE:3049
+#ION_BINDINGSITE:1
+#ION_BINDINGSITE_PROFILES:1
+#ION_BINDINGSITE_LIGRESIDUES:3
+#ION_BINDINGSITE_LIGMOIETIES:3
+#ION_BINDINGSITE_LIGATOMS:4
+#ION_BINDINGSITE_LIGNEIGHBORS:1
+#ION_BINDINGSITE_LIGATOMNEIGHBORS:6
+#ION_BONDVALENCE:14
+#WATER_BINDINGSITE:0
+#WATER_BONDVALENCE:0
+#DISTANCE:4.500000
+#PDBFILE(0):pdbyxhw.ent
+Executed /script/createNeighborhoodPartialTables.sql successfully.
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE FUNCTION
+ d45 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d44 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d43 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d42 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d41 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d40 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d39 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d38 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d37 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d36 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d35 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d34 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d33 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d32 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d31 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d30 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d29 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d28 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d27 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d26 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d25 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d24 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d23 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d22 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d21 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d20 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d19 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d18 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d17 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d16 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d15 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d14 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d13 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d12 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d11 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d10 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d09 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d08 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d07 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d06 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d05 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d04 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d03 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d02 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE FUNCTION
+ d01 
+-----
+    
+(1 row)
+
+DROP FUNCTION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+Executed /script/yxhw_nb_result/copyNeighborhoodData.sql successfully.
+SET
+COPY 1
+COPY 3
+COPY 4
+COPY 3
+COPY 2960
+COPY 21548
+COPY 13087
+COPY 92475
+COPY 14
+COPY 1
+COPY 1
+COPY 4
+
+ERROR:  table "all_metal_1" does not exist
+SELECT 1
+ERROR:  table "all_metal" does not exist
+SELECT 1
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 1
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 1
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+ERROR:  table "transition_metal" does not exist
+SELECT 0
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "transition_metal_coord" does not exist
+SELECT 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ERROR:  table "ch_site" does not exist
+SELECT 120
+ERROR:  table "ch_site_result_2" does not exist
+SELECT 60
+ERROR:  table "ch_site_result_3" does not exist
+SELECT 15
+ERROR:  table "ch_site_result_4" does not exist
+SELECT 2
+ERROR:  table "ch_site_2" does not exist
+SELECT 31
+ERROR:  table "ch_site_3" does not exist
+SELECT 2
+ERROR:  table "ch_site234" does not exist
+SELECT 35
+ERROR:  table "zncu_predict_sites" does not exist
+SELECT 35
+DELETE 7
+ALTER TABLE
+UPDATE 28
+ALTER TABLE
+UPDATE 3
+UPDATE 17
+UPDATE 8
+ERROR:  table "pre_zncu_coord_sites" does not exist
+SELECT 9
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 4
+ALTER TABLE
+UPDATE 6
+ALTER TABLE
+UPDATE 2
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 5
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 1
+ALTER TABLE
+UPDATE 1
+ERROR:  table "edh_site" does not exist
+SELECT 158
+ERROR:  table "edh_site_result_2" does not exist
+SELECT 79
+ERROR:  table "edh_site_result_3" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_4" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_5" does not exist
+SELECT 0
+ERROR:  table "edh_site_result_6" does not exist
+SELECT 0
+ERROR:  table "edh_site_2" does not exist
+SELECT 79
+ERROR:  table "edh_site_3" does not exist
+SELECT 0
+ERROR:  table "edh_site_4" does not exist
+SELECT 0
+ERROR:  table "edh_site_5" does not exist
+SELECT 0
+ERROR:  table "edh_site23456" does not exist
+SELECT 79
+ERROR:  table "metal_predict_sites" does not exist
+SELECT 79
+DELETE 12
+ALTER TABLE
+UPDATE 67
+ALTER TABLE
+UPDATE 9
+UPDATE 26
+UPDATE 32
+ERROR:  table "pre_metal_coord_sites" does not exist
+SELECT 23
+ALTER TABLE
+UPDATE 4
+ALTER TABLE
+UPDATE 4
+UPDATE 6
+UPDATE 6
+ALTER TABLE
+UPDATE 8
+ALTER TABLE
+UPDATE 8
+UPDATE 6
+UPDATE 6
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+UPDATE 13
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 13
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 13
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 13
+ALTER TABLE
+UPDATE 9
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 23
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 6
+ALTER TABLE
+UPDATE 6
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+ERROR:  table "ch_metal_coord23" does not exist
+CREATE TABLE
+COPY 8
+ERROR:  table "ch_metal_coord4" does not exist
+CREATE TABLE
+COPY 1
+ERROR:  table "zncu_predict_sites_2" does not exist
+SELECT 9
+ERROR:  table "edh_metal_coord" does not exist
+CREATE TABLE
+COPY 23
+ERROR:  table "metal_coord6" does not exist
+CREATE TABLE
+COPY 0
+ERROR:  table "metal_predict_sites_2" does not exist
+SELECT 23
+ERROR:  table "hydro_pre_chedh" does not exist
+CREATE TABLE
+COPY 672
+ERROR:  table "chemtype_pre_chedh" does not exist
+CREATE TABLE
+COPY 1104
+ALTER TABLE
+UPDATE 189
+UPDATE 483
+ALTER TABLE
+UPDATE 189
+UPDATE 483
+ALTER TABLE
+UPDATE 672
+ALTER TABLE
+UPDATE 672
+ERROR:  table "hydro_proba_chedh" does not exist
+CREATE TABLE
+COPY 3
+ALTER TABLE
+UPDATE 63
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 3
+ERROR:  table "chedh_angel_dist" does not exist
+CREATE TABLE
+COPY 32
+ERROR:  table "chedh_features" does not exist
+SELECT 32
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 5
+UPDATE 4
+UPDATE 3
+UPDATE 6
+UPDATE 1
+UPDATE 2
+UPDATE 1
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 3
+UPDATE 3
+UPDATE 3
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 13
+UPDATE 6
+UPDATE 4
+UPDATE 9
+UPDATE 6
+UPDATE 8
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 6
+UPDATE 12
+UPDATE 5
+2024-12-04 03:25:32.863753: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 03:25:35.014086: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 180ms/step
+2024-12-04 03:25:36.612019: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-04 03:25:38.657489: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 239ms/step
+ERROR:  table "chmodel_result" does not exist
+CREATE TABLE
+COPY 6
+ALTER TABLE
+UPDATE 6
+UPDATE 3
+ERROR:  table "edhmodel_result" does not exist
+CREATE TABLE
+COPY 23
+ALTER TABLE
+UPDATE 23
+UPDATE 0
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 2
+/script/hybrid_algorithm/match_exp_to_pre.py:41: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  exp_sites = pd.read_sql(sql_exp, conn)
+/script/hybrid_algorithm/match_exp_to_pre.py:42: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  edh_sites = pd.read_sql(sql_edh, conn)
+/script/hybrid_algorithm/match_exp_to_pre.py:43: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  ch_sites = pd.read_sql(sql_ch, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:46: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df1 = pd.read_sql(sql1, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:47: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df2 = pd.read_sql(sql2, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:48: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df3 = pd.read_sql(sql3, conn)
+/script/hybrid_algorithm/exp_presites_clusterer.py:51: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+  df = pd.concat([df1, df2, df3],ignore_index=True)
+ERROR:  table "pre_chain" does not exist
+CREATE TABLE
+COPY 5
+ERROR:  column "chainid_ion" of relation "metal_predict_sites_2" does not exist
+ALTER TABLE
+UPDATE 2
+ERROR:  column "chainid_ion" of relation "zncu_predict_sites_2" does not exist
+ALTER TABLE
+UPDATE 3
+ERROR:  table "match_exp2pre" does not exist
+CREATE TABLE
+COPY 0
+ALTER TABLE
+UPDATE 0
+ERROR:  table "metals_cluster" does not exist
+CREATE TABLE
+COPY 5
+ERROR:  table "pre_sites" does not exist
+SELECT 3
+ALTER TABLE
+UPDATE 3
+ALTER TABLE
+UPDATE 0
+ERROR:  table "exp_sites" does not exist
+SELECT 0
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 3
+ALTER TABLE
+UPDATE 0
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ERROR:  table "presites_info_neighbor" does not exist
+CREATE TABLE
+COPY 3
+yxhw: PDB string read successfully.
+yxhw: Cluster string read successfully.
+yxhw: Assembly string read successfully.
+yxhw: Molprobity probe hydrogen bond/vdw interaction read successfully.
+yxhw: contact string read successfully.
+yxhw: Ligand angle calculation successfully.
+yxhw: Bond valence calculation successfully.
+yxhw: Ion binding site calculation successfully.
+yxhw: Water site calculation successfully.
+yxhw: Neighbor calculation successfully.
+
+ Spacegroup information obtained from library file: 
+ Logical Name: SYMINFO   Filename: /script/neighborhood_0.8.0_src/lib/syminfo.lib
+
+Processing chain A, resi 3701, resn IHP
+Processing chain A, resi 3702, resn 88C
+Processing chain C, resi 601, resn ATP
+Processing chain C, resi 602, resn _MG
+Processing chain B, resi 3703, resn _ZN
+Processing chain A, resi 3704, resn _ZN
+Processing chain B, resi 3705, resn _ZN
+valence 3A value: 0.341461
+valence 3A value: 0.715536
+valence 3A value: 0.796534
+valence 3A value: 0.971450
+valence 3A value: 0.091048
+valence 3A value: 1.597516
+valence 3A value: 2.166750
+valence 3A value: 0.094838
+valence 3A value: 0.421062
+valence 3A value: 0.746178
+valence 3A value: 0.977706
+valence 3A value: 0.515150
+valence 3A value: 1.027379
+valence 3A value: 1.734683
+valence 3A value: 2.193167
+#CCDINFO(0):pdbyxhw.ent
+#GENEONTOLOGY:0
+#ASSEMBLY:0
+#CAVITY:0
+#COMPONENT:3
+#FUNCTION:4
+#KEYWORD:25
+#CDHIT_CHAIN:3
+#SYMOP_CHAIN:0
+#MOLECULE:10
+#DOMAIN:0
+#RESIDUE:2963
+#ATOM:21551
+#RESIDUE_NEIGHBOR:13101
+#ATOM_NEIGHBOR:92525
+#MOLPROBITY:0
+#NEIGHBOR_VECTOR:107031
+#LIGAND_BONDANGLE:3128
+#ION_BINDINGSITE:4
+#ION_BINDINGSITE_PROFILES:4
+#ION_BINDINGSITE_LIGRESIDUES:13
+#ION_BINDINGSITE_LIGMOIETIES:13
+#ION_BINDINGSITE_LIGATOMS:15
+#ION_BINDINGSITE_LIGNEIGHBORS:13
+#ION_BINDINGSITE_LIGATOMNEIGHBORS:21
+#ION_BONDVALENCE:37
+#WATER_BINDINGSITE:0
+#WATER_BONDVALENCE:0
+#DISTANCE:4.500000
+#PDBFILE(0):pdbyxhw.ent
+ERROR:  table "chemfeatures_pre_ch" does not exist
+CREATE TABLE
+COPY 9
+ERROR:  table "chemfeatures_pre_edh" does not exist
+CREATE TABLE
+COPY 23
+ERROR:  table "ion_bindingsites" does not exist
+CREATE TABLE
+COPY 3
+ERROR:  table "ionresidueid_id" does not exist
+CREATE TABLE
+COPY 3
+ERROR:  table "classmodel_feature_neighbor_ch" does not exist
+SELECT 2
+ALTER TABLE
+UPDATE 0
+UPDATE 2
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "classmodel_feature_neighbor_edh" does not exist
+SELECT 1
+ALTER TABLE
+UPDATE 0
+UPDATE 1
+ALTER TABLE
+ALTER TABLE
+ERROR:  table "classmodel_feature_neighbor_chedh" does not exist
+SELECT 3
+2024-12-04 03:25:51.845442: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but BalancedRandomForestClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but EasyEnsembleClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but LogisticRegression was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but BalancedRandomForestClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but MLPClassifier was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but SVC was fitted with feature names
+  warnings.warn(
+/opt/conda/envs/PinMyMetal/lib/python3.11/site-packages/sklearn/base.py:464: UserWarning: X does not have valid feature names, but EasyEnsembleClassifier was fitted with feature names
+  warnings.warn(
+ERROR:  table "chedhclass_result" does not exist
+CREATE TABLE
+COPY 3
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 3
+ALTER TABLE
+UPDATE 0
+UPDATE 0
+UPDATE 0
+UPDATE 3
+ALTER TABLE
+UPDATE 3
+DROP DATABASE
+end

@@ -15,7 +15,9 @@ services:
       - metal_prediction
 
   conda_container:
-    image: ghcr.io/hhz-lab/pinmymetal-conda-env:latest      # Use the Conda environment image we built
+    image: ghcr.io/hhz-lab/pinmymetal-conda-env:latest      # Use this line if you pulled the pre-built image
+    # OR
+    # image: pinmymetal-conda-env                           # Use this line if you built the image locally
     container_name: conda_container      # Container name
     depends_on:
       - postgresql_container                    # Ensure the PostgreSQL container starts first

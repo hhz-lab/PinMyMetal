@@ -1,0 +1,9 @@
+{"name":"exp","bench":"false","status":"Y","pid":"5","chain":"I","resseq":"54","ligand":"29,I,CYS;12,I,CYS;15,I,CYS","metal_name":"Zinc"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"C","resseq":"54","ligand":"15,C,CYS;12,C,CYS;29,C,CYS;26,C,CYS","metal_name":"Zinc"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"D","resseq":"54","ligand":"15,D,CYS;26,D,CYS;29,D,CYS;12,D,CYS","metal_name":"Zinc"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"E","resseq":"54","ligand":"12,E,CYS;26,E,CYS;15,E,CYS;29,E,CYS","metal_name":"Zinc"}
+{"name":"exp","bench":"true","status":"U","pid":"0","chain":"J","resseq":"54","ligand":"12,J,CYS;15,J,CYS;26,J,CYS;29,J,CYS","metal_name":"Zinc"}
+{"name":"pre","bench":"predict","status":"U","pid":"4","resseq":"101","chain":"H  ","ligand":"12,H,CYS;15,H,CYS;26,H,CYS;29,H,CYS","metal_name":"Zinc","Metal Probability":"0.94"}
+{"name":"pre","bench":"false","status":"U","pid":"5","resseq":"102","chain":"I  ","ligand":"12,I,CYS;15,I,CYS;26,I,CYS;29,I,CYS","metal_name":"Zinc","Metal Probability":"0.93"}
+{"name":"pre","bench":"predict","status":"U","pid":"7","resseq":"103","chain":"M  ","ligand":"12,M,CYS;15,M,CYS;26,M,CYS;29,M,CYS","metal_name":"Zinc","Metal Probability":"0.94"}
+{"name":"pre","bench":"predict","status":"U","pid":"8","resseq":"104","chain":"O  ","ligand":"12,O,CYS;15,O,CYS;26,O,CYS;29,O,CYS","metal_name":"Zinc","Metal Probability":"0.93"}

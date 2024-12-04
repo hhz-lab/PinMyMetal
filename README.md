@@ -17,27 +17,32 @@ This repository provides a fully containerized environment for the PinMyMetal pr
 
 Both options ensure seamless replication of the project environment for reliable local execution.
 
-## Quick Start Guide: Using Pre-Built Images
+## Installation Options: Pre-built Images or Local Build
 
 ### Step 1: Install Docker
 Ensure that Docker is installed on your system. You can follow the official [Docker installation guide](https://docs.docker.com/get-docker/) for your platform.
 
 ### Step 2: Build the Docker Image for Conda
-You can build the Docker image either by using the pre-pulled image from GitHub Container Registry or by building it locally.
+You can either use the pre-pulled image from GitHub Container Registry or build the image locally.
 - **Option 1: Using Pre-built Image**
   If you prefer not to build the image yourself, you can pull the pre-built image from GitHub Container Registry:
   ```bash
   docker pull ghcr.io/hhz-lab/pinmymetal-conda-env:latest
   ```
 - **Option 2: Building the Image Locally**
-  Ensure you are in the PinMyMetal/metal_prediction directory and run:
+  Ensure you are in the `PinMyMetal/metal_prediction` directory and run:
   ```bash
   docker build -t pinmymetal-conda-env -f conda_dockerfile .
   ```
-Both options will create the pinmymetal-conda-env image, but the local build gives you more control over the image customization.
+Both options will create functionally equivalent images, but the local build allows for customization of the image.
 
-
-### Step 3: Start Containers
+### Step 3: Modify Docker Configuration (if needed)
+- **If using the pre-built image, no changes are needed to**
+  `docker-compose.yml`.
+- **If building the image locally, comment out the image:**
+  `ghcr.io/hhz-lab/pinmymetal-conda-env:latest` line and replace it with **image**: `pinmymetal-conda-env`.
+  
+### Step 4: Start Containers
 Navigate to the `metal_prediction` directory:
 ```bash
 cd metal_prediction
@@ -47,7 +52,7 @@ Start the containers using `docker-compose`:
 docker-compose up -d
 ```
 
-### Step 4: Access the Conda Environment
+### Step 5: Access the Conda Environment
 Enter the Conda container:
 ```bash
 docker exec -it conda_container bash
@@ -57,7 +62,7 @@ Activate the Conda environment:
 conda activate PinMyMetal
 ```
 
-### Step 5: Execute Scripts
+### Step 6: Execute Scripts
 Navigate to the `execute` directory and run the required scripts:
 ```bash
 cd execute
@@ -70,14 +75,14 @@ To predict metal binding sites for a specific PDB structure (e.g., `2zp9`), use 
 ```bash
 python3 execute.py -p 2zp9
 ```
-The results will be saved in the `output_data` directory. A corresponding PDB file containing the predicted metal information will be named `X_metal.pdb`, and detailed binding site information will be stored in `X_output.csv`.
+The results will be saved in the `output_data` directory, with the predicted metal information stored in `2zp9_metal.pdb` and detailed binding site data in `2zp9_output.csv`.
 
 #### Example 2: Using Your Own Uploaded File
-If you want to use your own uploaded PDB file, ensure the file is placed in the `input_data` directory. For example, to use a file named `7pw5.pdb`, run:
+To use your own PDB file (e.g., `7PW5.pdb`), place it in the `input_data` directory and run:
 ```bash
-python3 execute.py -f 7pw5.pdb
+python3 execute.py -f 7PW5.pdb
 ```
-The output files will be generated in the `output_data` directory. For instance, you may find the files `7pw5_metal.pdb` and `7pw5_output.csv` in the directory.
+The output files `7PW5_metal.pdb` and `7PW5_output.csv` will be saved in the `output_data` directory.
 
 #### Output Files Description
 - **`X_metal.pdb`**: This file contains the predicted metal binding information. If any metal binding sites are predicted, they will appear at the end of the file. The insertion code in column 27 will be marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
