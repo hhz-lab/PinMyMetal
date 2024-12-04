@@ -85,13 +85,6 @@ python3 execute.py -f 7PW5.pdb
 The output files `7PW5_metal.pdb` and `7PW5_output.csv` will be saved in the `output_data` directory.
 The results will be saved in the `output_data` directory. A corresponding PDB file containing the predicted metal information will be named `2zp9_metal.pdb`, and detailed binding site information will be stored in `2zp9_output.csv`.
 
-#### Example 2: Using Your Own Uploaded File
-If you want to use your own uploaded PDB file, ensure the file is placed in the `input_data` directory. For example, to use a file named `7PW5.pdb`, run:
-```bash
-python3 execute.py -f 7PW5.pdb
-```
-The output files will be generated in the `output_data` directory. For instance, you may find the files `7PW5_metal.pdb` and `7PW5_output.csv` in the directory.
-
 #### Output Files Description
 - **`X_metal.pdb`**: This file contains the predicted metal binding information. If any metal binding sites are predicted, they will appear at the end of the file. The insertion code in column 27 will be marked with "@" to indicate the metals predicted by PMM. Corresponding ligands can be found in the LINK section.
 - **`X_output.csv`**: This file stores detailed information about the predicted binding sites.
